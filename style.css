@@ -104,6 +104,7 @@ nav.navbar .navbar-nav .nav-link.active::after {
   justify-content: center;
   min-height: 100vh;
   height: 100%;
+  margin-bottom: 5rem;
 }
 #about .about-container h1 {
   font-family: "Mars-Project", sans-serif;
@@ -122,30 +123,41 @@ nav.navbar .navbar-nav .nav-link.active::after {
   height: 100%;
   margin-bottom: 5rem;
 }
-#why .row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+#why .why-container {
+  min-height: 100vh;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 3rem;
 }
-#why .row .col {
+#why .why-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center !important;
+  text-align: center !important;
+}
+#why .why-container .row .col {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-#why .row .col h1 {
+#why .why-container .row .col h1 {
   font-family: "Mars-Project", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem !important;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 5rem;
 }
-#why .row .why-cards {
+#why .why-container .row .why-cards {
+  padding: 2rem;
   height: 23rem;
   z-index: 10;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
-#why .row .why-cards .card-content {
+#why .why-container .row .why-cards .card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,17 +165,19 @@ nav.navbar .navbar-nav .nav-link.active::after {
   text-align: center;
   position: relative;
 }
-#why .row .why-cards .card-content img {
-  width: 8rem;
-  height: 9rem;
+#why .why-container .row .why-cards .card-content img {
+  max-width: 8rem;
   position: absolute;
   top: -200px;
   z-index: 1;
 }
-#why .row .why-cards .card-content .rupee-card {
+#why .why-container .row .why-cards .card-content .rupee-card {
   top: -185px;
 }
-#why .row .why-cards .card-content h1 {
+#why .why-container .row .why-cards .card-content .insight-card {
+  top: -140px;
+}
+#why .why-container .row .why-cards .card-content h1 {
   color: #0099db;
   font-size: 2rem;
   text-transform: uppercase;
@@ -178,6 +192,11 @@ nav.navbar .navbar-nav .nav-link.active::after {
   min-height: 100vh;
   margin-bottom: 5rem;
 }
+#sponsors .sponsors-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 #sponsors .sponsors-container > h1 {
   text-align: center;
   font-family: "Mars-Project", sans-serif;
@@ -191,19 +210,14 @@ nav.navbar .navbar-nav .nav-link.active::after {
   display: flex;
   text-align: center !important;
   justify-content: center;
+  align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
-}
-@media (min-width: 768px) {
-  #sponsors .sponsors-container .row {
-    text-align: start !important;
-    justify-content: flex-start !important;
-  }
 }
 #sponsors .sponsors-container .row h1 {
   margin-bottom: 2rem;
   margin-top: 5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1;
@@ -217,8 +231,8 @@ nav.navbar .navbar-nav .nav-link.active::after {
   text-align: center;
 }
 #sponsors .sponsors-container .row .card .card-content .logo img {
-  height: 4rem;
-  width: 5rem;
+  width: 25rem;
+  max-width: 50%;
 }
 
 #organizers {
@@ -246,6 +260,12 @@ nav.navbar .navbar-nav .nav-link.active::after {
   flex-wrap: wrap;
   gap: 3rem;
 }
+#organizers .organizers-container .card {
+  border-radius: 100%;
+}
+#organizers .organizers-container .card .card-content .card-img img {
+  border-radius: 100%;
+}
 
 #footer {
   height: 100vh;
@@ -268,9 +288,9 @@ nav.navbar .navbar-nav .nav-link.active::after {
   position: relative;
 }
 #footer .footer-container .logo span {
+  display: none;
   height: 10rem;
   width: 9rem;
-  display: block;
   border: #00b2ff;
   border-radius: 100%;
   position: absolute;
@@ -279,7 +299,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   z-index: 0;
 }
 #footer .footer-container .logo img {
-  height: 5rem;
   width: 18rem;
   position: relative;
   margin-bottom: 3rem;
@@ -299,9 +318,10 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 
 .card {
+  border: 3px solid rgba(0, 153, 219, 0.3);
   background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  height: 286px;
   width: 286px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -310,6 +330,21 @@ nav.navbar .navbar-nav .nav-link.active::after {
   z-index: 10;
 }
 .card .card-content .card-img img {
-  height: 230px;
-  width: 230px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #sponsors .row {
+    justify-content: flex-start !important;
+    align-items: center;
+  }
+  #sponsors .row .col {
+    text-align: start !important;
+  }
+  #why .why-container row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between !important;
+  }
 }/*# sourceMappingURL=style.css.map */

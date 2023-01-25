@@ -136,6 +136,7 @@ nav.navbar {
   justify-content: center;
   min-height: 100vh;
   height: 100%;
+  margin-bottom: 5rem;
 
   .about-container {
     h1 {
@@ -157,55 +158,73 @@ nav.navbar {
   min-height: 100vh;
   height: 100%;
   margin-bottom: 5rem;
-
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .col {
+  // padding-left: 4rem;
+  // padding-right: 1rem;
+  .why-container {
+    min-height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 3rem;
+    .row {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      align-items: center !important;
+      text-align: center !important;
 
-      h1 {
-        font-family: "Mars-Project", sans-serif;
-        font-size: 4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 5rem;
-      }
-    }
-    .why-cards {
-      height: 23rem;
-      z-index: 10;
-      margin-top: 5rem;
-
-      .card-content {
+      .col {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        position: relative;
-
-        img {
-          width: 8rem;
-          height: 9rem;
-          position: absolute;
-          top: -200px;
-          z-index: 1;
-        }
-
-        .rupee-card {
-          top: -185px;
-        }
 
         h1 {
-          color: #0099db;
-          font-size: 2rem;
+          font-family: "Mars-Project", sans-serif;
+          font-size: 3rem !important;
+          font-weight: 700;
           text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 5rem;
+        }
+      }
+      .why-cards {
+        padding: 2rem;
+        height: 23rem;
+        z-index: 10;
+        margin-top: 5rem;
+
+        margin-bottom: 5rem;
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          position: relative;
+
+          img {
+            max-width: 8rem;
+            position: absolute;
+            top: -200px;
+            z-index: 1;
+          }
+
+          .rupee-card {
+            top: -185px;
+          }
+
+          .insight-card {
+            top: -140px;
+          }
+
+          h1 {
+            color: #0099db;
+            font-size: 2rem;
+            text-transform: uppercase;
+          }
         }
       }
     }
@@ -222,6 +241,10 @@ nav.navbar {
   margin-bottom: 5rem;
 
   .sponsors-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
     & > h1 {
       text-align: center;
       font-family: "Mars-Project", sans-serif;
@@ -236,19 +259,15 @@ nav.navbar {
       display: flex;
       text-align: center !important;
       justify-content: center;
+      align-items: center;
       gap: 3rem;
       flex-wrap: wrap;
-
-      @media (min-width: 768px) {
-        text-align: start !important;
-        justify-content: flex-start !important;
-      }
 
       h1 {
         margin-bottom: 2rem;
         margin-top: 5rem;
 
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1;
@@ -269,8 +288,8 @@ nav.navbar {
         .card-content {
           .logo {
             img {
-              height: 4rem;
-              width: 5rem;
+              width: 25rem;
+              max-width: 50%;
             }
           }
         }
@@ -304,6 +323,16 @@ nav.navbar {
     align-items: center;
     flex-wrap: wrap;
     gap: 3rem;
+    .card {
+      border-radius: 100%;
+      .card-content {
+        .card-img {
+          img {
+            border-radius: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -328,9 +357,10 @@ nav.navbar {
       position: relative;
 
       span {
+        display: none;
         height: 10rem;
         width: 9rem;
-        display: block;
+        // display: block;
         border: #00b2ff;
         border-radius: 100%;
         position: absolute;
@@ -344,7 +374,7 @@ nav.navbar {
       }
 
       img {
-        height: 5rem;
+        // height: 5rem;
         width: 18rem;
         position: relative;
         margin-bottom: 3rem;
@@ -415,13 +445,15 @@ nav.navbar {
 
 // IMPLEMENTED
 .card {
+  border: 3px solid rgba(0, 153, 219, 0.3);
   background: linear-gradient(
     102.24deg,
     #00b2ff -137.58%,
     rgba(3, 18, 69, 0) 122.85%
   );
-  height: 286px;
+  // height: 286px;
   width: 286px;
+  padding: 2rem;
   //   border: 2px solid white;
   display: flex;
   justify-content: center;
@@ -431,9 +463,31 @@ nav.navbar {
     .card-img {
       // align-items: center;
       img {
-        height: 230px;
-        width: 230px;
+        width: 100%;
         // position: absolute;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  #sponsors {
+    .row {
+      justify-content: flex-start !important;
+      align-items: center;
+      .col {
+        text-align: start !important;
+        // justify-content: flex-start !important;
+      }
+    }
+  }
+
+  #why {
+    .why-container {
+      row {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between !important;
       }
     }
   }

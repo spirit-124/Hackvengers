@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap');
+
+
+$body-background: #000;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Mars-Project';
+    /* give the font a name */
+    src: url('./font/Mars-Project.otf') format('opentype'),
+        url('./font/Mars-Project.ttf') format('truetype'),
+        url('./font/Mars-Project.woff') format('woff2');
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+body {
+    background: $body-background;
+    color: #fff;
+    font-family: 'Figtree', sans-serif;
+}
+
+nav.navbar {
+    background: transparent !important;
+    border-bottom: 1px solid rgb(123, 123, 123);
+    // color: gray;
+
+    .navbar-nav .nav-link {
+        color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            color: white !important;
+            // margin-right: 4px;
+            // margin-bottom: 4px;
+        }
+
+        &.active::after {
+            // Make a dot under the active link
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            margin-left: 6px;
+        }
+    }
+
+    // .collapse-div{
+    //     display: flex;
+    //     justify-content: center;
+    //     flex-direction: column;
+    // }
+}
+
+
+.btn-white-gradient {
+    border: 1px solid white;
+    padding: 8px 20px;
+    // background-color: blue;
+    border-radius: 0;
+    color: white;
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: .4s ease;
+    }
+
+    &:hover {
+        border: 1px solid white;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+#hero {
+    .hero-container {
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            font-family: 'Mars-Project', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+
+.blue-gradient-button {
+    background: linear-gradient(102.24deg, #00B2FF -137.58%, rgba(3, 18, 69, 0) 122.85%);
+    // padding: 10px;
+    color: white;
+    font-family: 'Figtree';
+    border: 1px solid #24CAFF;
+    padding: 10px 25px;
+    margin-top: 3rem;
+    border-radius: 0;
+}

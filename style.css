@@ -62,17 +62,19 @@ nav.navbar .navbar-nav .nav-link.active::after {
 .btn-white-gradient:hover {
   border: 1px solid white;
 }
-.btn-white-gradient:hover a {
-  text-decoration: underline;
-}
 
+#hero {
+  background: url("./assets/HERO PATTERN.svg") no-repeat center;
+  background-size: cover;
+}
 #hero .hero-container {
-  min-height: 100vh;
+  min-height: 90vh;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-size: cover;
   text-align: center;
 }
 #hero .hero-container h1 {
@@ -88,11 +90,262 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 
 .blue-gradient-button {
-  background: linear-gradient(102.24deg, #00B2FF -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
   color: white;
   font-family: "Figtree";
-  border: 1px solid #24CAFF;
+  border: 1px solid #24caff;
   padding: 10px 25px;
   margin-top: 3rem;
   border-radius: 0;
+}
+
+#about {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+}
+#about .about-container h1 {
+  font-family: "Mars-Project", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1;
+  margin-bottom: 5rem;
+}
+#about .about-container p {
+  font-size: 1.3rem;
+}
+
+#why {
+  min-height: 100vh;
+  height: 100%;
+  margin-bottom: 5rem;
+}
+#why .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#why .row .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#why .row .col h1 {
+  font-family: "Mars-Project", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5rem;
+}
+#why .row .why-cards {
+  height: 23rem;
+  z-index: 10;
+  margin-top: 5rem;
+}
+#why .row .why-cards .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+#why .row .why-cards .card-content img {
+  position: absolute;
+  z-index: 1;
+}
+#why .row .why-cards .card-content img.insight-img {
+  width: 12rem;
+  height: 9rem;
+  top: -187px;
+}
+#why .row .why-cards .card-content img.bulb {
+  width: 11rem;
+  height: 12rem;
+  top: -220px;
+}
+#why .row .why-cards .card-content img.rupee {
+  width: 7rem;
+  height: 9rem;
+  top: -194px;
+}
+#why .row .why-cards .card-content .rupee-card {
+  top: -185px;
+}
+#why .row .why-cards .card-content h1 {
+  color: #0099db;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: flex-start;
+  height: 100%;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+}
+#sponsors .sponsors-container > h1 {
+  text-align: center;
+  font-family: "Mars-Project", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1;
+  margin-bottom: 5rem;
+}
+#sponsors .sponsors-container .row {
+  display: flex;
+  text-align: center !important;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  #sponsors .sponsors-container .row {
+    text-align: start !important;
+    justify-content: flex-start !important;
+  }
+}
+#sponsors .sponsors-container .row h1 {
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1;
+}
+#sponsors .sponsors-container .row .card {
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  height: 11rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#sponsors .sponsors-container .row .card .card-content .logo img {
+  height: 4rem;
+}
+
+#organizers {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+#organizers h1 {
+  font-family: "Mars-Project", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5rem;
+}
+#organizers .organizers-container {
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+#footer .footer-container .logo {
+  display: inline;
+  position: relative;
+}
+#footer .footer-container .logo span {
+  height: 10rem;
+  width: 10rem;
+  display: block;
+  border: #00b3ff;
+  border-radius: 100%;
+  filter: blur(70px);
+  position: absolute;
+  right: 6rem;
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  z-index: 0;
+}
+#footer .footer-container .logo img {
+  height: 5rem;
+  width: 18rem;
+  position: relative;
+  margin-bottom: 3rem;
+  z-index: 3;
+}
+@media (min-width: 786px) {
+  #footer .footer-container .logo img {
+    height: 6rem;
+    width: 22rem;
+  }
+}
+#footer .footer-container .social-media-icons {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  height: 286px;
+  width: 286px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.card .card-content {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-content .card-img img {
+  height: 330px;
+  width: 330px;
+}
+
+#organizers .card {
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  height: 286px;
+  border-radius: 50%;
+  width: 286px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#organizers .card .card-content {
+  z-index: 10;
+}
+#organizers .card .card-content .card-img img {
+  height: 230px;
+  border-radius: 50%;
+  width: 230px;
 }/*# sourceMappingURL=style.css.map */

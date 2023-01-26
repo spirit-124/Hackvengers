@@ -47,17 +47,21 @@ nav.navbar {
       color: white !important;
       // margin-right: 4px;
       // margin-bottom: 4px;
+      display: flex;
+      flex-direction: column;
     }
 
     &.active::after {
       // Make a dot under the active link
+      
+
       content: "";
       display: block;
       width: 4px;
       height: 4px;
       background: white;
       border-radius: 50%;
-      margin-left: 6px;
+      // margin-left: 6px;
     }
   }
 
@@ -87,7 +91,7 @@ nav.navbar {
 }
 
 #hero {
-  background: url('./assets/HERO\ PATTERN.svg') no-repeat center;
+  background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)),url('./assets/HERO\ PATTERN.svg') no-repeat center;
   background-size: cover;
 
   .hero-container {
@@ -103,7 +107,7 @@ nav.navbar {
     h1 {
       font-family: "Mars-Project", sans-serif;
       font-size: 4rem;
-      font-weight: 700;
+      font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 1rem;
@@ -140,8 +144,8 @@ nav.navbar {
     h1 {
       font-family: "Mars-Project", sans-serif;
       font-size: 4rem;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-weight: 400;
+      // text-transform: uppercase;
       letter-spacing: 1;
       margin-bottom: 5rem;
     }
@@ -170,13 +174,47 @@ nav.navbar {
       h1 {
         font-family: "Mars-Project", sans-serif;
         font-size: 4rem;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-weight: 400;
+        // text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 5rem;
       }
     }
 
+    .card {
+      background: linear-gradient(102.24deg,
+          #00b2ff -137.58%,
+          rgba(3, 18, 69, 0) 122.85%);
+      height: 286px;
+      // border-radius: 50%;
+      width: 286px;
+      //   border: 2px solid white;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    
+      .card-content {
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+          padding: 0 20px;
+        }
+    
+        .card-img {
+    
+    
+          // align-items: center;
+          img {
+            height: 330px;
+            // border-radius: 50%;
+            width: 330px;
+            // position: absolute;
+          }
+        }
+      }
+    }
     .why-cards {
       height: 23rem;
       z-index: 10;
@@ -204,13 +242,13 @@ nav.navbar {
           top: -187px;
         }
 
-        img.bulb{
+        img.bulb {
           width: 11rem;
           height: 12rem;
           top: -220px;
         }
 
-        img.rupee{
+        img.rupee {
           width: 7rem;
           height: 9rem;
           top: -194px;
@@ -246,8 +284,8 @@ nav.navbar {
       text-align: center;
       font-family: "Mars-Project", sans-serif;
       font-size: 4rem;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-weight: 400;
+      // text-transform: uppercase;
       letter-spacing: 1;
       margin-bottom: 5rem;
     }
@@ -311,8 +349,8 @@ nav.navbar {
   h1 {
     font-family: "Mars-Project", sans-serif;
     font-size: 3.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 400;
+    // text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5rem;
   }
@@ -368,19 +406,23 @@ nav.navbar {
         margin-bottom: 3rem;
         z-index: 3;
 
-        @media (min-width: 786px) {
-          height: 6rem;
-          width: 22rem;
-        }
+        // @media (min-width: 786px) {
+        //   height: 6rem;
+        //   width: 22rem;
+        // }
       }
     }
 
-    .social-media-icons {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
+    // .social-media-icons {
+    //   display: flex !important;
+    //   align-items: center;
+    //   justify-content: center;
+    //   gap: 1rem;
+    // }
+  }
+  .socials{
+    display: flex;
+    gap: 20px;
   }
 }
 
@@ -433,66 +475,99 @@ nav.navbar {
 // }
 
 // IMPLEMENTED
-.card {
-  background: linear-gradient(102.24deg,
-      #00b2ff -137.58%,
-      rgba(3, 18, 69, 0) 122.85%);
-  height: 286px;
-  // border-radius: 50%;
-  width: 286px;
-  //   border: 2px solid white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 
-  .card-content {
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .card-img {
-      
-      
-      // align-items: center;
-      img {
-        height: 330px;
-        // border-radius: 50%;
-        width: 330px;
-        // position: absolute;
-      }
-    }
-  }
+
+
+
+.platinum-heading {
+  
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180deg at 48.5% 50%, #5F5C5A -48.57deg, #868686 130.63deg, #FFFFFF 133.38deg, #A49DCD 204.46deg, #FFFFFF 279.38deg, #5F5C5A 311.43deg, #868686 490.63deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+
 }
 
+.golden-heading {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #C68F0C -48.57deg, #785A0E 106.88deg, #B48B24 118.12deg, #CBBC34 204.46deg, #E1A30D 279.38deg, #C68F0C 311.43deg, #785A0E 466.88deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+}
 
-#organizers{
-  .card {
-    background: linear-gradient(102.24deg,
-        #00b2ff -137.58%,
-        rgba(3, 18, 69, 0) 122.85%);
-    height: 286px;
-    border-radius: 50%;
-    width: 286px;
-    //   border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.silver-heading {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #9F9A8D -48.57deg, #585858 106.88deg, #C9C9C9 118.12deg, #FFFFFF 204.46deg, #B8B8B8 279.38deg, #9F9A8D 311.43deg, #585858 466.88deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+
+  mix-blend-mode: screen;
+  // filter: blur(4.5px);
+  }
+
+
   
-    .card-content {
-      z-index: 10;
+  #organizers {
+  
+    .main-column {
+      width: 320px;
+    }
+    .card {
+      background-color: transparent;
+  
   
       .card-img {
-        
-        
-        // align-items: center;
+        background: linear-gradient(102.24deg,
+            #00b2ff -137.58%,
+            rgba(3, 18, 69, 0) 122.85%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 320px;
+        margin-bottom: 3rem;
+  
         img {
-          height: 230px;
+          width: 286px;
+          height: 286px;
           border-radius: 50%;
-          width: 230px;
-          // position: absolute;
         }
       }
     }
+  
+    //   background: linear-gradient(102.24deg,
+    //       #00b2ff -137.58%,
+    //       rgba(3, 18, 69, 0) 122.85%);
+    //   height: 286px;
+    //   border-radius: 50%;
+    //   width: 286px;
+    //   //   border: 2px solid white;
+    //   display: flex;
+    //   justify-content: center;
+    //   text-align: center;
+  
+    //   .card-content {
+    //     z-index: 10;
+  
+    //     .card-img {
+  
+  
+    //       // align-items: center;
+    //       img {
+    //         height: 230px;
+    //         border-radius: 50%;
+    //         width: 230px;
+    //         // position: absolute;
+    //       }
+    //     }
+    //   }
+    // }
   }
-}

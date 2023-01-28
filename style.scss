@@ -1,171 +1,592 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap");
 
 $body-background: #000;
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: 'Mars-Project';
-    /* give the font a name */
-    src: url('./font/Mars-Project.otf') format('opentype'),
-        url('./font/Mars-Project.ttf') format('truetype'),
-        url('./font/Mars-Project.woff') format('woff2');
+  font-family: "Mars-Project";
+  /* give the font a name */
+  src: url("./font/Mars-Project.otf") format("opentype"),
+    url("./font/Mars-Project.ttf") format("truetype"),
+    url("./font/Mars-Project.woff") format("woff2");
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-
-
 body {
-    background: $body-background;
-    color: #fff;
-    font-family: 'Figtree', sans-serif;
+  background: $body-background;
+  color: #fff;
+  font-family: "Figtree", sans-serif;
 }
 
 nav.navbar {
-    background: transparent !important;
-    border-bottom: 1px solid rgb(123, 123, 123);
-    // color: gray;
+  background: transparent !important;
+  border-bottom: 1px solid rgb(123, 123, 123);
+  // color: gray;
 
-    .navbar-nav .nav-link {
-        color: gray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:hover {
-            color: white;
-        }
-
-        &.active {
-            color: white !important;
-            // margin-right: 4px;
-            // margin-bottom: 4px;
-        }
-
-        &.active::after {
-            // Make a dot under the active link
-            content: '';
-            display: block;
-            width: 4px;
-            height: 4px;
-            background: white;
-            border-radius: 50%;
-            margin-left: 6px;
-        }
-    }
-
-    // .collapse-div{
-    //     display: flex;
-    //     justify-content: center;
-    //     flex-direction: column;
-    // }
-}
-
-
-.btn-white-gradient {
-    border: 1px solid white;
-    padding: 8px 20px;
-    // background-color: blue;
-    border-radius: 0;
-    color: white;
-
-    a {
-        color: white;
-        text-decoration: none;
-        transition: .4s ease;
-    }
+  .navbar-nav .nav-link {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
-        border: 1px solid white;
-
-        a {
-            text-decoration: underline;
-        }
+      color: white;
     }
+
+    &.active {
+      color: white !important;
+      // margin-right: 4px;
+      // margin-bottom: 4px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.active::after {
+      // Make a dot under the active link
+
+
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      // margin-left: 6px;
+    }
+  }
+
+  // .collapse-div{
+  //     display: flex;
+  //     justify-content: center;
+  //     flex-direction: column;
+  // }
 }
 
+.btn-white-gradient {
+  border: 1px solid white;
+  padding: 8px 20px;
+  // background-color: blue;
+  border-radius: 0;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+
+  &:hover {
+    border: 1px solid white;
+  }
+}
 
 #hero {
-    .hero-container {
-        min-height: 100vh;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('./assets/HERO\ PATTERN.svg') no-repeat center;
+  background-size: cover;
 
-        h1 {
-            font-family: 'Mars-Project', sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-        p{
-            font-size: 1.3rem;
-        }
+  .hero-container {
+    min-height: 90vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    text-align: center;
+
+    h1 {
+      font-family: "Mars-Project", sans-serif;
+      font-size: 4rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
     }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
 }
-
-
-
-section{
-    padding: 3rem 1rem;
-}
-
 
 .blue-gradient-button {
-    background: linear-gradient(102.24deg, #00B2FF -137.58%, rgba(3, 18, 69, 0) 122.85%);
-    // padding: 10px;
-    color: white;
-    font-family: 'Figtree';
-    border: 1px solid #24CAFF;
-    padding: 10px 25px;
-    margin-top: 3rem;
-    border-radius: 0;
+  background: linear-gradient(102.24deg,
+      #00b2ff -137.58%,
+      rgba(3, 18, 69, 0) 122.85%);
+  // padding: 10px;
+  color: white;
+  font-family: "Figtree";
+  border: 1px solid #24caff;
+  padding: 10px 25px;
+  margin-top: 3rem;
+  border-radius: 0;
 }
 
-.section-heading{
-    font-size: 3rem;
-    text-align: center;
-    font-family: 'Mars-Project';
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 3rem;
+#about {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+
+  .about-container {
+    h1 {
+      font-family: "Mars-Project", sans-serif;
+      font-size: 4rem;
+      font-weight: 400;
+      // text-transform: uppercase;
+      letter-spacing: 1;
+      margin-bottom: 5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
 }
 
+.right-svg {
+  position: absolute;
+  right: -29rem;
+  top: -29rem;
+}
 
-#why{
-    .why-cards{
+.left-svg {
+  position: absolute;
+  right: 57rem;
+  top: 100rem;
+}
+.left-svg-2 {
+  position: absolute;
+  right: 57rem;
+  top: -26rem;
+}
+#why {
+  min-height: 100vh;
+  height: 100%;
+  margin-bottom: 5rem;
+
+  position: relative;
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-family: "Mars-Project", sans-serif;
+        font-size: 4rem;
+        font-weight: 400;
+        // text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5rem;
+      }
+    }
+
+    .card {
+      background: linear-gradient(102.24deg,
+          #00b2ff -137.58%,
+          rgba(3, 18, 69, 0) 122.85%);
+      height: 286px;
+      // border-radius: 50%;
+      width: 286px;
+      //   border: 2px solid white;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      .card-content {
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        margin-top: 3rem;
-        border: 1px solid #24CAFF;
-        padding: 0 2rem;
-        position: relative;
-        h3{
-            margin-top: 5rem;
-            color: #0099DB;
+
+        p {
+          padding: 0 20px;
         }
-        .top-logo{
-            position: absolute;
-            top: -50%;
-            transform: translate(-50%, 36%);
-            left: 50%;
+
+        .card-img {
+
+
+          // align-items: center;
+          img {
+            height: 330px;
+            // border-radius: 50%;
+            width: 330px;
+            // position: absolute;
+          }
         }
+      }
     }
+
+    .why-cards {
+      height: 23rem;
+      z-index: 10;
+      margin-top: 5rem;
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+        img {
+          // width: 8rem;
+          // height: 9rem;
+          position: absolute;
+          // top: -187px;
+          z-index: 1;
+        }
+
+        img.insight-img {
+          width: 12rem;
+          height: 9rem;
+          top: -187px;
+        }
+
+        img.bulb {
+          width: 11rem;
+          height: 12rem;
+          top: -220px;
+        }
+
+        img.rupee {
+          width: 7rem;
+          height: 9rem;
+          top: -194px;
+        }
+
+
+        .rupee-card {
+          top: -185px;
+        }
+
+        h1 {
+          color: #0099db;
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+#sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: flex-start;
+  height: 100%;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+
+  .sponsors-container {
+    &>h1 {
+      text-align: center;
+      font-family: "Mars-Project", sans-serif;
+      font-size: 4rem;
+      font-weight: 400;
+      // text-transform: uppercase;
+      letter-spacing: 1;
+      margin-bottom: 5rem;
+    }
+
+    .row {
+      display: flex;
+      text-align: center !important;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+
+      @media (min-width: 768px) {
+        text-align: start !important;
+        justify-content: flex-start !important;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1;
+      }
+
+      .card {
+        background: linear-gradient(102.24deg,
+            #00b2ff -137.58%,
+            rgba(3, 18, 69, 0) 122.85%);
+
+        height: 11rem;
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .card-content {
+          .logo {
+            img {
+              height: 4rem;
+              // width: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#organizers {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  gap: 2rem;
+  padding-top: 10rem;
+
+  h1 {
+    font-family: "Mars-Project", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+  }
+
+  .organizers-container {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+
+    .logo {
+      display: inline;
+      position: relative;
+
+      span {
+        height: 10rem;
+        width: 10rem;
+        display: block;
+        border: #00b3ff;
+        border-radius: 100%;
+        filter: blur(70px);
+        position: absolute;
+        right: 6rem;
+        background: linear-gradient(102.24deg,
+            #00b2ff -137.58%,
+            rgba(3, 18, 69, 0) 122.85%);
+        z-index: 0;
+      }
+
+      img {
+        height: 5rem;
+        width: 18rem;
+        position: relative;
+        margin-bottom: 3rem;
+        z-index: 3;
+
+        // @media (min-width: 786px) {
+        //   height: 6rem;
+        //   width: 22rem;
+        // }
+      }
+    }
+
+    // .social-media-icons {
+    //   display: flex !important;
+    //   align-items: center;
+    //   justify-content: center;
+    //   gap: 1rem;
+    // }
+  }
+
+  .socials {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+// AYAN SUGGESTED CARD
+// .card {
+//   height: 286px;
+//   position: relative;
+//   width: 286px;
+//   //   border: 2px solid white;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+//   .card-content {
+//     z-index: 8;
+//     .card-img {
+//       // align-items: center;
+//       img {
+//         height: 230px;
+//         width: 230px;
+//         // position: absolute;
+//       }
+//     }
+//   }
+//   &::before {
+//     content: "";
+//     height: 4px;
+//     width: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     background: linear-gradient(
+//       102.24deg,
+//       #00b2ff -137.58%,
+//       rgba(3, 18, 69, 0) 122.85%
+//     );
+//   }
+//   &::after {
+//     content: "";
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     background: linear-gradient(
+//       102.24deg,
+//       #00b2ff -137.58%,
+//       rgba(3, 18, 69, 0) 122.85%
+//     );
+//   }
+// }
+
+// IMPLEMENTED
+
+
+
+
+
+.platinum-heading {
+
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180deg at 48.5% 50%, #5F5C5A -48.57deg, #868686 130.63deg, #FFFFFF 133.38deg, #A49DCD 204.46deg, #FFFFFF 279.38deg, #5F5C5A 311.43deg, #868686 490.63deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+
+}
+
+.golden-heading {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #C68F0C -48.57deg, #785A0E 106.88deg, #B48B24 118.12deg, #CBBC34 204.46deg, #E1A30D 279.38deg, #C68F0C 311.43deg, #785A0E 466.88deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+}
+
+.silver-heading {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #9F9A8D -48.57deg, #585858 106.88deg, #C9C9C9 118.12deg, #FFFFFF 204.46deg, #B8B8B8 279.38deg, #9F9A8D 311.43deg, #585858 466.88deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+
+  mix-blend-mode: screen;
+  // filter: blur(4.5px);
+}
+
+
+
+#organizers {
+
+  .card {
+    background-color: transparent;
+
+
+    .card-img {
+      background: linear-gradient(102.24deg,
+          #00b2ff -137.58%,
+          rgba(3, 18, 69, 0) 122.85%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      height: 240px;
+      margin-bottom: 3rem;
+
+      img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  //   background: linear-gradient(102.24deg,
+  //       #00b2ff -137.58%,
+  //       rgba(3, 18, 69, 0) 122.85%);
+  //   height: 286px;
+  //   border-radius: 50%;
+  //   width: 286px;
+  //   //   border: 2px solid white;
+  //   display: flex;
+  //   justify-content: center;
+  //   text-align: center;
+
+  //   .card-content {
+  //     z-index: 10;
+
+  //     .card-img {
+
+
+  //       // align-items: center;
+  //       img {
+  //         height: 230px;
+  //         border-radius: 50%;
+  //         width: 230px;
+  //         // position: absolute;
+  //       }
+  //     }
+  //   }
+  // }
 }

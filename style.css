@@ -37,11 +37,8 @@ nav.navbar .navbar-nav .nav-link:hover {
 }
 nav.navbar .navbar-nav .nav-link.active {
   color: white !important;
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
-=======
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 }
 nav.navbar .navbar-nav .nav-link.active::after {
   content: "";
@@ -50,10 +47,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   height: 4px;
   background: white;
   border-radius: 50%;
-<<<<<<< HEAD
-=======
-  margin-left: 6px;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 }
 
 .btn-white-gradient {
@@ -70,7 +63,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
 .btn-white-gradient:hover {
   border: 1px solid white;
 }
-<<<<<<< HEAD
 
 #hero {
   background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/HERO PATTERN.svg") no-repeat center;
@@ -78,33 +70,18 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 #hero .hero-container {
   min-height: 90vh;
-=======
-.btn-white-gradient:hover a {
-  text-decoration: underline;
-}
-
-#hero .hero-container {
-  min-height: 100vh;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-<<<<<<< HEAD
   background-size: cover;
-=======
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   text-align: center;
 }
 #hero .hero-container h1 {
   font-family: "Mars-Project", sans-serif;
   font-size: 4rem;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 700;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
@@ -130,20 +107,11 @@ nav.navbar .navbar-nav .nav-link.active::after {
   justify-content: center;
   min-height: 100vh;
   height: 100%;
-<<<<<<< HEAD
-=======
-  margin-bottom: 5rem;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 }
 #about .about-container h1 {
   font-family: "Mars-Project", sans-serif;
   font-size: 4rem;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 700;
-  text-transform: uppercase;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   letter-spacing: 1;
   margin-bottom: 5rem;
 }
@@ -151,7 +119,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   font-size: 1.3rem;
 }
 
-<<<<<<< HEAD
 .right-svg {
   position: absolute;
   right: -29rem;
@@ -176,13 +143,10 @@ nav.navbar .navbar-nav .nav-link.active::after {
   top: -32rem;
 }
 
-=======
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 #why {
   min-height: 100vh;
   height: 100%;
   margin-bottom: 5rem;
-<<<<<<< HEAD
   position: relative;
 }
 #why .row {
@@ -232,44 +196,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   text-decoration: none;
 }
 #why .row .why-cards .card-content {
-=======
-}
-#why .why-container {
-  min-height: 100vh;
-  align-items: center;
-  text-align: center;
-  justify-content: space-around;
-  padding: 3rem;
-}
-#why .why-container .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center !important;
-  text-align: center !important;
-}
-#why .why-container .row .col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-#why .why-container .row .col h1 {
-  font-family: "Mars-Project", sans-serif;
-  font-size: 3rem !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 5rem;
-}
-#why .why-container .row .why-cards {
-  padding: 2rem;
-  height: 23rem;
-  z-index: 10;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-#why .why-container .row .why-cards .card-content {
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,7 +203,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   text-align: center;
   position: relative;
 }
-<<<<<<< HEAD
 #why .row .why-cards .card-content img {
   position: absolute;
   z-index: 1;
@@ -310,25 +235,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
 }
-=======
-#why .why-container .row .why-cards .card-content img {
-  max-width: 8rem;
-  position: absolute;
-  top: -200px;
-  z-index: 1;
-}
-#why .why-container .row .why-cards .card-content .rupee-card {
-  top: -185px;
-}
-#why .why-container .row .why-cards .card-content .insight-card {
-  top: -140px;
-}
-#why .why-container .row .why-cards .card-content h1 {
-  color: #0099db;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 
 #sponsors {
   display: flex;
@@ -339,24 +245,11 @@ nav.navbar .navbar-nav .nav-link.active::after {
   min-height: 100vh;
   margin-bottom: 5rem;
 }
-<<<<<<< HEAD
-=======
-#sponsors .sponsors-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 #sponsors .sponsors-container > h1 {
   text-align: center;
   font-family: "Mars-Project", sans-serif;
   font-size: 4rem;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 700;
-  text-transform: uppercase;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   letter-spacing: 1;
   margin-bottom: 5rem;
 }
@@ -364,7 +257,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   display: flex;
   text-align: center !important;
   justify-content: center;
-<<<<<<< HEAD
   gap: 3rem;
   flex-wrap: wrap;
 }
@@ -378,16 +270,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   margin-bottom: 2rem;
   margin-top: 5rem;
   font-size: 4rem;
-=======
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-#sponsors .sponsors-container .row h1 {
-  margin-bottom: 2rem;
-  margin-top: 5rem;
-  font-size: 3rem;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1;
@@ -399,19 +281,12 @@ nav.navbar .navbar-nav .nav-link.active::after {
   display: flex;
   justify-content: center;
   text-align: center;
-<<<<<<< HEAD
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
 }
 #sponsors .sponsors-container .row .card .card-content .logo img {
   height: 4rem;
-=======
-}
-#sponsors .sponsors-container .row .card .card-content .logo img {
-  width: 25rem;
-  max-width: 50%;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 }
 
 #organizers {
@@ -427,12 +302,7 @@ nav.navbar .navbar-nav .nav-link.active::after {
 #organizers h1 {
   font-family: "Mars-Project", sans-serif;
   font-size: 3.5rem;
-<<<<<<< HEAD
   font-weight: 400;
-=======
-  font-weight: 700;
-  text-transform: uppercase;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   letter-spacing: 1px;
   margin-bottom: 5rem;
 }
@@ -443,7 +313,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   flex-wrap: wrap;
   gap: 3rem;
 }
-<<<<<<< HEAD
 #organizers .organizers-container .row {
   display: flex;
   justify-content: space-between;
@@ -455,22 +324,10 @@ nav.navbar .navbar-nav .nav-link.active::after {
 
 #footer {
   min-height: 100vh;
-=======
-#organizers .organizers-container .card {
-  border-radius: 100%;
-}
-#organizers .organizers-container .card .card-content .card-img img {
-  border-radius: 100%;
-}
-
-#footer {
-  height: 100vh;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   position: relative;
   text-align: center;
 }
@@ -482,10 +339,6 @@ nav.navbar .navbar-nav .nav-link.active::after {
   z-index: -10;
   width: 100%;
 }
-=======
-  text-align: center;
-}
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 #footer .footer-container {
   display: flex;
   flex-direction: column;
@@ -499,36 +352,24 @@ nav.navbar .navbar-nav .nav-link.active::after {
   position: relative;
 }
 #footer .footer-container .logo span {
-<<<<<<< HEAD
   height: 10rem;
   width: 10rem;
   display: block;
   border: #00b3ff;
   border-radius: 100%;
   filter: blur(70px);
-=======
-  display: none;
-  height: 10rem;
-  width: 9rem;
-  border: #00b2ff;
-  border-radius: 100%;
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   position: absolute;
   right: 6rem;
   background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
   z-index: 0;
 }
 #footer .footer-container .logo img {
-<<<<<<< HEAD
   height: 5rem;
-=======
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
   width: 18rem;
   position: relative;
   margin-bottom: 3rem;
   z-index: 3;
 }
-<<<<<<< HEAD
 #footer .socials {
   display: flex;
   gap: 20px;
@@ -569,49 +410,4 @@ nav.navbar .navbar-nav .nav-link.active::after {
 
 .silver-heading {
   background-image: linear-gradient(180deg, rgb(162, 252, 232) 1%, rgb(71, 60, 134) 100%) !important;
-=======
-@media (min-width: 786px) {
-  #footer .footer-container .logo img {
-    height: 6rem;
-    width: 22rem;
-  }
-}
-#footer .footer-container .social-media-icons {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.card {
-  border: 3px solid rgba(0, 153, 219, 0.3);
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  width: 286px;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.card .card-content {
-  z-index: 10;
-}
-.card .card-content .card-img img {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  #sponsors .row {
-    justify-content: flex-start !important;
-    align-items: center;
-  }
-  #sponsors .row .col {
-    text-align: start !important;
-  }
-  #why .why-container row {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between !important;
-  }
->>>>>>> 78e19ce37243b37fbce247228989063832056ebe
 }/*# sourceMappingURL=style.css.map */

@@ -54,7 +54,6 @@ nav.navbar {
     &.active::after {
       // Make a dot under the active link
 
-
       content: "";
       display: block;
       width: 4px;
@@ -91,7 +90,8 @@ nav.navbar {
 }
 
 #hero {
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('./assets/HERO\ PATTERN.svg') no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url("./assets/HERO\ PATTERN.svg") no-repeat center;
   background-size: cover;
 
   .hero-container {
@@ -120,9 +120,11 @@ nav.navbar {
 }
 
 .blue-gradient-button {
-  background: linear-gradient(102.24deg,
-      #00b2ff -137.58%,
-      rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(
+    102.24deg,
+    #00b2ff -137.58%,
+    rgba(3, 18, 69, 0) 122.85%
+  );
   // padding: 10px;
   color: white;
   font-family: "Figtree";
@@ -159,19 +161,25 @@ nav.navbar {
 .right-svg {
   position: absolute;
   right: -29rem;
-  top: -29rem;
+  top: -36rem;
 }
 
 .left-svg {
   position: absolute;
-  right: 57rem;
-  top: 100rem;
+  right: 61rem;
+  top: 110rem;
+}
+
+.right-svg-1 {
+  position: absolute;
+  right: -28rem;
+  top: 173rem;
 }
 
 .left-svg-2 {
   position: absolute;
-  right: 57rem;
-  top: -26rem;
+  right: 61rem;
+  top: -32rem;
 }
 
 #why {
@@ -198,13 +206,21 @@ nav.navbar {
         // text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 5rem;
+        // color: rgb(226, 215, 48);
+        // color: linear-gradient(
+        //   90deg,
+        //   rgba(226, 215, 48, 1) 0%,
+        //   rgba(198, 158, 12, 1) 100%
+        // );
       }
     }
 
     .card {
-      background: linear-gradient(102.24deg,
-          #00b2ff -137.58%,
-          rgba(3, 18, 69, 0) 122.85%);
+      background: linear-gradient(
+        102.24deg,
+        #00b2ff -137.58%,
+        rgba(3, 18, 69, 0) 122.85%
+      );
       height: 286px;
       // border-radius: 50%;
       width: 286px;
@@ -224,8 +240,6 @@ nav.navbar {
         }
 
         .card-img {
-
-
           // align-items: center;
           img {
             height: 330px;
@@ -276,7 +290,6 @@ nav.navbar {
           top: -194px;
         }
 
-
         .rupee-card {
           top: -185px;
         }
@@ -287,6 +300,17 @@ nav.navbar {
           font-weight: 700;
           text-transform: uppercase;
         }
+      }
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease-out;
+      text-decoration: none;
+    }
+
+    &:hover {
+      .card:hover {
+        transform: translateY(-5px) scale(1.005) translateZ(0);
+        box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+          0 24px 46px var(--box-shadow-color);
       }
     }
   }
@@ -302,7 +326,7 @@ nav.navbar {
   margin-bottom: 5rem;
 
   .sponsors-container {
-    &>h1 {
+    & > h1 {
       text-align: center;
       font-family: "Mars-Project", sans-serif;
       font-size: 4rem;
@@ -335,9 +359,11 @@ nav.navbar {
       }
 
       .card {
-        background: linear-gradient(102.24deg,
-            #00b2ff -137.58%,
-            rgba(3, 18, 69, 0) 122.85%);
+        background: linear-gradient(
+          102.24deg,
+          #00b2ff -137.58%,
+          rgba(3, 18, 69, 0) 122.85%
+        );
 
         height: 11rem;
         width: 20rem;
@@ -353,6 +379,9 @@ nav.navbar {
             }
           }
         }
+        box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease-out;
+        text-decoration: none;
       }
     }
   }
@@ -382,18 +411,39 @@ nav.navbar {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    // flex-shrink: 1;
     gap: 3rem;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      .col-md-3 {
+        width: 20% !important;
+      }
+    }
   }
 }
 
 #footer {
-  height: 100vh;
+  // height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   text-align: center;
+
+  .footer-background-svg {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+      url("./assets/HERO\ PATTERN.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: -7rem;
+    z-index: -10;
+    width: 100%;
+  }
 
   .footer-container {
     display: flex;
@@ -416,9 +466,11 @@ nav.navbar {
         filter: blur(70px);
         position: absolute;
         right: 6rem;
-        background: linear-gradient(102.24deg,
-            #00b2ff -137.58%,
-            rgba(3, 18, 69, 0) 122.85%);
+        background: linear-gradient(
+          102.24deg,
+          #00b2ff -137.58%,
+          rgba(3, 18, 69, 0) 122.85%
+        );
         z-index: 0;
       }
 
@@ -500,53 +552,65 @@ nav.navbar {
 
 // IMPLEMENTED
 
+// .platinum-heading {
+//   background: linear-gradient(
+//     0deg,
+//     #5f5c5a,
+//     #868686,
+//     #ffffff,
+//     #a49dcd,
+//     #ffffff,
+//     #5f5c5a,
+//     #868686
+//   );
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   text-fill-color: transparent;
+//   background-blend-mode: overlay, normal;
+// }
 
+// .golden-heading {
+//   background: linear-gradient(0deg, #cbbc34, #c68f0c, #e1a30d);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   text-fill-color: transparent;
+//   background-blend-mode: overlay, normal;
+// }
 
+// .silver-heading {
+//   background: linear-gradient(
+//     0deg,
+//     #9f9a8d,
+//     #585858,
+//     #c9c9c9,
+//     #ffffff,
+//     #b8b8b8,
+//     #9f9a8d,
+//     #585858
+//   ) !important;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text !important;
+//   text-fill-color: transparent;
+//   background-blend-mode: overlay, normal;
 
-
-.platinum-heading {
-
-  background: linear-gradient(0deg, #5F5C5A, #868686, #FFFFFF, #A49DCD, #FFFFFF, #5F5C5A, #868686);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-
-}
-
-.golden-heading {
-  background: linear-gradient(0deg, #CBBC34, #C68F0C, #E1A30D);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-}
-
-.silver-heading {
-  background: linear-gradient(0deg,#9F9A8D, #585858, #C9C9C9, #FFFFFF, #B8B8B8, #9F9A8D, #585858) !important;
-  -webkit-text-fill-color: transparent;
-  background-clip: text !important;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-
-  mix-blend-mode: screen;
-  // filter: blur(4.5px);
-}
-
-
+//   mix-blend-mode: screen;
+//   // filter: blur(4.5px);
+// }
 
 #organizers {
-
   .card {
     background-color: transparent;
 
+    // padding: 5rem;
 
     .card-img {
-      background: linear-gradient(102.24deg,
-          #00b2ff -137.58%,
-          rgba(3, 18, 69, 0) 122.85%);
+      background: linear-gradient(
+        102.24deg,
+        #00b2ff -137.58%,
+        rgba(3, 18, 69, 0) 122.85%
+      );
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -554,10 +618,11 @@ nav.navbar {
       width: 240px;
       height: 240px;
       margin-bottom: 3rem;
+      // margin-right: 4rem;
 
       img {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        // height: 220px;
         border-radius: 50%;
       }
     }
@@ -579,7 +644,6 @@ nav.navbar {
 
   //     .card-img {
 
-
   //       // align-items: center;
   //       img {
   //         height: 230px;
@@ -590,4 +654,40 @@ nav.navbar {
   //     }
   //   }
   // }
+}
+
+// TEXT_GRADIENTS
+.gradient-text {
+  // background-image: linear-gradient(
+  //   45deg,
+  //   rgb(253, 228, 3) 0%,
+  //   rgb(241, 172, 10) 100%
+  // );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.platinum-heading {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 10%,
+    rgb(141, 128, 214) 100%
+  ) !important;
+}
+
+.golden-heading {
+  background-image: linear-gradient(
+    180deg,
+    rgba(241, 169, 8, 1) 0%,
+    rgba(194, 237, 11, 1) 100%
+  );
+}
+
+.silver-heading {
+  background-image: linear-gradient(
+    180deg,
+    rgb(162, 252, 232) 1%,
+    rgb(71, 60, 134) 100%
+  ) !important;
 }

@@ -344,7 +344,7 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 
 .platinum-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180deg at 48.5% 50%, #5F5C5A -48.57deg, #868686 130.63deg, #FFFFFF 133.38deg, #A49DCD 204.46deg, #FFFFFF 279.38deg, #5F5C5A 311.43deg, #868686 490.63deg);
+  background: linear-gradient(0deg, #5F5C5A, #868686, #FFFFFF, #A49DCD, #FFFFFF, #5F5C5A, #868686);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -353,7 +353,7 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 
 .golden-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #C68F0C -48.57deg, #785A0E 106.88deg, #B48B24 118.12deg, #CBBC34 204.46deg, #E1A30D 279.38deg, #C68F0C 311.43deg, #785A0E 466.88deg);
+  background: linear-gradient(0deg, #CBBC34, #C68F0C, #E1A30D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -362,10 +362,10 @@ nav.navbar .navbar-nav .nav-link.active::after {
 }
 
 .silver-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #9F9A8D -48.57deg, #585858 106.88deg, #C9C9C9 118.12deg, #FFFFFF 204.46deg, #B8B8B8 279.38deg, #9F9A8D 311.43deg, #585858 466.88deg);
-  -webkit-background-clip: text;
+  background: linear-gradient(0deg, #9F9A8D, #585858, #C9C9C9, #FFFFFF, #B8B8B8, #9F9A8D, #585858) !important;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
   text-fill-color: transparent;
   background-blend-mode: overlay, normal;
   mix-blend-mode: screen;

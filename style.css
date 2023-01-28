@@ -37,8 +37,6 @@ nav.navbar .navbar-nav .nav-link:hover {
 }
 nav.navbar .navbar-nav .nav-link.active {
   color: white !important;
-  display: flex;
-  flex-direction: column;
 }
 nav.navbar .navbar-nav .nav-link.active::after {
   content: "";
@@ -47,6 +45,7 @@ nav.navbar .navbar-nav .nav-link.active::after {
   height: 4px;
   background: white;
   border-radius: 50%;
+  margin-left: 6px;
 }
 
 .btn-white-gradient {
@@ -63,25 +62,23 @@ nav.navbar .navbar-nav .nav-link.active::after {
 .btn-white-gradient:hover {
   border: 1px solid white;
 }
-
-#hero {
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/HERO PATTERN.svg") no-repeat center;
-  background-size: cover;
+.btn-white-gradient:hover a {
+  text-decoration: underline;
 }
+
 #hero .hero-container {
-  min-height: 90vh;
+  min-height: 100vh;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-size: cover;
   text-align: center;
 }
 #hero .hero-container h1 {
   font-family: "Mars-Project", sans-serif;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
@@ -90,285 +87,46 @@ nav.navbar .navbar-nav .nav-link.active::after {
   font-size: 1.3rem;
 }
 
+section {
+  padding: 3rem 1rem;
+}
+
 .blue-gradient-button {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(102.24deg, #00B2FF -137.58%, rgba(3, 18, 69, 0) 122.85%);
   color: white;
   font-family: "Figtree";
-  border: 1px solid #24caff;
+  border: 1px solid #24CAFF;
   padding: 10px 25px;
   margin-top: 3rem;
   border-radius: 0;
 }
 
-#about {
+.section-heading {
+  font-size: 3rem;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  height: 100%;
-}
-#about .about-container h1 {
-  font-family: "Mars-Project", sans-serif;
-  font-size: 4rem;
+  font-family: "Mars-Project";
   font-weight: 400;
-  letter-spacing: 1;
-  margin-bottom: 5rem;
-}
-#about .about-container p {
-  font-size: 1.3rem;
-}
-
-#why {
-  min-height: 100vh;
-  height: 100%;
-  margin-bottom: 5rem;
-}
-#why .row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-#why .row .col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#why .row .col h1 {
-  font-family: "Mars-Project", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 5rem;
-}
-#why .row .card {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  height: 286px;
-  width: 286px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#why .row .card .card-content {
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#why .row .card .card-content p {
-  padding: 0 20px;
-}
-#why .row .card .card-content .card-img img {
-  height: 330px;
-  width: 330px;
-}
-#why .row .why-cards {
-  height: 23rem;
-  z-index: 10;
-  margin-top: 5rem;
-}
-#why .row .why-cards .card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-#why .row .why-cards .card-content img {
-  position: absolute;
-  z-index: 1;
-}
-#why .row .why-cards .card-content img.insight-img {
-  width: 12rem;
-  height: 9rem;
-  top: -187px;
-}
-#why .row .why-cards .card-content img.bulb {
-  width: 11rem;
-  height: 12rem;
-  top: -220px;
-}
-#why .row .why-cards .card-content img.rupee {
-  width: 7rem;
-  height: 9rem;
-  top: -194px;
-}
-#why .row .why-cards .card-content .rupee-card {
-  top: -185px;
-}
-#why .row .why-cards .card-content h1 {
-  color: #0099db;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-#sponsors {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: flex-start;
-  height: 100%;
-  min-height: 100vh;
-  margin-bottom: 5rem;
-}
-#sponsors .sponsors-container > h1 {
-  text-align: center;
-  font-family: "Mars-Project", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 1;
-  margin-bottom: 5rem;
-}
-#sponsors .sponsors-container .row {
-  display: flex;
-  text-align: center !important;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-@media (min-width: 768px) {
-  #sponsors .sponsors-container .row {
-    text-align: start !important;
-    justify-content: flex-start !important;
-  }
-}
-#sponsors .sponsors-container .row h1 {
-  margin-bottom: 2rem;
-  margin-top: 5rem;
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1;
-}
-#sponsors .sponsors-container .row .card {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  height: 11rem;
-  width: 20rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#sponsors .sponsors-container .row .card .card-content .logo img {
-  height: 4rem;
-}
-
-#organizers {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 3rem;
-  gap: 2rem;
-  padding-top: 10rem;
-}
-#organizers h1 {
-  font-family: "Mars-Project", sans-serif;
-  font-size: 3.5rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 5rem;
-}
-#organizers .organizers-container {
-  display: flex !important;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-#footer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-#footer .footer-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 4rem;
-}
-#footer .footer-container .logo {
-  display: inline;
-  position: relative;
-}
-#footer .footer-container .logo span {
-  height: 10rem;
-  width: 10rem;
-  display: block;
-  border: #00b3ff;
-  border-radius: 100%;
-  filter: blur(70px);
-  position: absolute;
-  right: 6rem;
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  z-index: 0;
-}
-#footer .footer-container .logo img {
-  height: 5rem;
-  width: 18rem;
-  position: relative;
-  margin-bottom: 3rem;
-  z-index: 3;
-}
-#footer .socials {
-  display: flex;
-  gap: 20px;
-}
-
-.platinum-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180deg at 48.5% 50%, #5F5C5A -48.57deg, #868686 130.63deg, #FFFFFF 133.38deg, #A49DCD 204.46deg, #FFFFFF 279.38deg, #5F5C5A 311.43deg, #868686 490.63deg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-}
-
-.golden-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #C68F0C -48.57deg, #785A0E 106.88deg, #B48B24 118.12deg, #CBBC34 204.46deg, #E1A30D 279.38deg, #C68F0C 311.43deg, #785A0E 466.88deg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-}
-
-.silver-heading {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180.44deg at 48.5% 50%, #9F9A8D -48.57deg, #585858 106.88deg, #C9C9C9 118.12deg, #FFFFFF 204.46deg, #B8B8B8 279.38deg, #9F9A8D 311.43deg, #585858 466.88deg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-blend-mode: overlay, normal;
-  mix-blend-mode: screen;
-}
-
-#organizers .main-column {
-  width: 320px;
-}
-#organizers .card {
-  background-color: transparent;
-}
-#organizers .card .card-img {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  height: 320px;
+  color: #fff;
   margin-bottom: 3rem;
 }
-#organizers .card .card-img img {
-  width: 286px;
-  height: 286px;
-  border-radius: 50%;
+
+#why .why-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  border: 1px solid #24CAFF;
+  padding: 0 2rem;
+  position: relative;
+}
+#why .why-cards h3 {
+  margin-top: 5rem;
+  color: #0099DB;
+}
+#why .why-cards .top-logo {
+  position: absolute;
+  top: -50%;
+  transform: translate(-50%, 36%);
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */

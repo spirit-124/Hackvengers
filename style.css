@@ -303,6 +303,9 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 #sponsors .sponsors-container .row .card .card-content .logo img {
   height: 4rem;
 }
+#sponsors .sponsors-container .row #sponserBtn {
+  margin-top: 5rem;
+}
 
 #organizers {
   min-height: 100vh;
@@ -395,6 +398,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 
 #organizers .card {
   background-color: transparent;
+  z-index: 100000;
 }
 #organizers .card .card-img {
   background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
@@ -409,6 +413,10 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 #organizers .card .card-img img {
   width: 200px;
   border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+#organizers .card .card-img img:hover {
+  width: 243px;
 }
 
 .gradient-text {
@@ -430,7 +438,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   background-image: linear-gradient(180deg, rgb(162, 252, 232) 1%, rgb(71, 60, 134) 100%) !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .svg {
     display: block;
   }
@@ -438,6 +446,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     position: absolute;
     right: -29rem;
     top: -36rem;
+    z-index: -10;
   }
   .left-svg {
     position: absolute;
@@ -463,5 +472,51 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   }
   h1 {
     font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .right-svg-1 {
+    display: none;
+  }
+  .left-svg-2 {
+    right: 30rem !important;
+  }
+  #sponsors .sponsors-container .row {
+    gap: 1rem !important;
+  }
+  #sponsors .sponsors-container .row .card {
+    height: 11rem;
+    width: 18rem;
+  }
+  #organizers .card {
+    width: 12rem;
+  }
+}
+@media (min-width: 1200px) {
+  .left-svg-2 {
+    right: 55rem !important;
+  }
+  .left-svg {
+    right: 55rem;
+    top: 100rem;
+  }
+  .right-svg-1 {
+    display: block;
+    right: -29rem;
+  }
+  #sponsors .sponsors-container .row {
+    gap: 3rem !important;
+  }
+  #sponsors .sponsors-container .row .card {
+    height: 11rem;
+    width: 20rem;
+  }
+  #organizers .card {
+    width: 16rem;
+  }
+}
+@media (min-width: 1400px) {
+  .left-svg-2 {
+    right: 56rem !important;
   }
 }/*# sourceMappingURL=style.css.map */

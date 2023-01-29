@@ -408,6 +408,10 @@ nav.navbar {
         transition: all 0.3s ease-out;
         text-decoration: none;
       }
+
+      #sponserBtn {
+        margin-top: 5rem;
+      }
     }
   }
 }
@@ -527,6 +531,7 @@ nav.navbar {
 #organizers {
   .card {
     background-color: transparent;
+    z-index: 100000;
 
     .card-img {
       background: linear-gradient(
@@ -541,27 +546,36 @@ nav.navbar {
       width: 240px;
       height: 240px;
       margin-bottom: 3rem;
+      // cursor: pointer;
+
       // margin-right: 4rem;
 
       img {
         width: 200px;
         // height: 220px;
         border-radius: 50%;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          width: 243px;
+        }
       }
+      // &:hover {
+      //   // height: 260px;
+      // }
     }
-
-    // .content {
-    //   text-align: center;
-    //   align-items: center;
-    //   // fkex-wrap: wrap;
-    //   width: max-content;
-    //   display: flex;
-    //   flex-direction: column;
-    //   /* margin-right: 3rem; */
-    //   margin-left: 3rem;
-    // }
   }
 }
+
+// .content {
+//   text-align: center;
+//   align-items: center;
+//   // fkex-wrap: wrap;
+//   width: max-content;
+//   display: flex;
+//   flex-direction: column;
+//   /* margin-right: 3rem; */
+//   margin-left: 3rem;
+// }
 
 // TEXT_GRADIENTS
 .gradient-text {
@@ -593,7 +607,7 @@ nav.navbar {
     rgb(71, 60, 134) 100%
   ) !important;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .svg {
     display: block;
   }
@@ -601,6 +615,7 @@ nav.navbar {
     position: absolute;
     right: -29rem;
     top: -36rem;
+    z-index: -10;
   }
 
   .left-svg {
@@ -650,6 +665,77 @@ nav.navbar {
   //     }
   //   }
   // }
+}
+@media screen and (min-width: 1000px) {
+  .right-svg-1 {
+    display: none;
+  }
+  .left-svg-2 {
+    right: 30rem !important;
+  }
+
+  #sponsors {
+    .sponsors-container {
+      .row {
+        gap: 1rem !important;
+
+        .card {
+          height: 11rem;
+          width: 18rem;
+        }
+      }
+    }
+  }
+
+  #organizers {
+    .card {
+      // height: 15rem;
+      width: 12rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .left-svg-2 {
+    right: 55rem !important;
+  }
+
+  .left-svg {
+    right: 55rem;
+    top: 100rem;
+  }
+
+  .right-svg-1 {
+    display: block;
+    right: -29rem;
+  }
+  #sponsors {
+    .sponsors-container {
+      .row {
+        gap: 3rem !important;
+
+        .card {
+          height: 11rem;
+          width: 20rem;
+        }
+
+        // flex-wrap: wrap !important;
+      }
+    }
+  }
+
+  #organizers {
+    .card {
+      // height: 18rem;
+      width: 16rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .left-svg-2 {
+    right: 56rem !important;
+  }
 }
 
 // AYAN SUGGESTED CARD

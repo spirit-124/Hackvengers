@@ -35,7 +35,14 @@ p {
 
 nav.navbar {
   background: transparent !important;
-  border-bottom: 1px solid rgb(123, 123, 123);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10000000;
+}
+nav.navbar .navbar-brand {
+  display: none;
 }
 nav.navbar .navbar-nav .nav-item {
   margin-inline: 1rem;
@@ -84,6 +91,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 #hero {
   background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/HERO PATTERN.svg") no-repeat center;
   background-size: cover;
+  height: 100vh;
+  min-height: 100%;
 }
 #hero .hero-container {
   min-height: 90vh;
@@ -141,7 +150,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 .right-svg {
   right: -29rem;
   top: -36rem;
-  display: block;
 }
 
 .left-svg {
@@ -411,13 +419,13 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   height: 240px;
   margin-bottom: 3rem;
 }
+#organizers .card .card-img .abhishek-img {
+  height: 205px !important;
+}
 #organizers .card .card-img img {
   width: 200px;
   border-radius: 50%;
-  transition: all 0.4s ease-in-out;
-}
-#organizers .card .card-img img:hover {
-  width: 243px;
+  transition: all 0.6s ease-in-out;
 }
 
 .gradient-text {
@@ -440,6 +448,9 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 }
 
 @media (min-width: 768px) {
+  .navbar-brand {
+    display: block !important;
+  }
   .svg {
     display: block;
   }
@@ -480,6 +491,9 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   }
 }
 @media screen and (min-width: 1000px) {
+  nav.navbar {
+    border-bottom: 1px solid white;
+  }
   .right-svg-1 {
     display: none;
   }

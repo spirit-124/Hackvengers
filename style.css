@@ -141,6 +141,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 .right-svg {
   right: -29rem;
   top: -36rem;
+  display: block;
 }
 
 .left-svg {
@@ -457,6 +458,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     position: absolute;
     right: -28rem;
     top: 173rem;
+    display: none;
   }
   .left-svg-2 {
     position: absolute;
@@ -465,10 +467,13 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     top: -32rem;
     right: 55rem !important;
   }
-  .row {
+  #organizers .row {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  #organizers .card {
+    flex-basis: 50%;
+    width: 14rem;
   }
   h1 {
     font-size: 4rem;
@@ -479,7 +484,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     display: none;
   }
   .left-svg-2 {
-    right: 30rem !important;
+    right: 39rem !important;
   }
   #sponsors .sponsors-container .row {
     gap: 1rem !important;
@@ -488,8 +493,16 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     height: 11rem;
     width: 18rem;
   }
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row !important;
+  }
   #organizers .card {
-    width: 12rem;
+    width: 14rem;
+  }
+  #organizers .row {
+    flex-wrap: nowrap;
   }
 }
 @media (min-width: 1200px) {
@@ -501,7 +514,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     top: 100rem;
   }
   .right-svg-1 {
-    display: block;
     right: -29rem;
   }
   #sponsors .sponsors-container .row {
@@ -518,12 +530,10 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 @media (min-width: 1400px) {
   .left-svg-2 {
     right: 67rem !important;
+    display: none;
   }
   .left-svg {
-    right: 67rem;
-    top: 100rem;
-  }
-  .right-svg-1 {
-    z-index: -100;
+    right: 67rem !important;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

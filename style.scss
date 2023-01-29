@@ -701,7 +701,7 @@ nav.navbar {
   }
 
   .left-svg {
-    right: 55rem;
+    right: 55rem !important;
     top: 100rem;
   }
 
@@ -734,7 +734,16 @@ nav.navbar {
 
 @media (min-width: 1400px) {
   .left-svg-2 {
-    right: 56rem !important;
+    right: 67rem !important;
+  }
+
+  .left-svg {
+    right: 67rem;
+    top: 100rem;
+  }
+
+  .right-svg-1 {
+    z-index: -100;
   }
 }
 

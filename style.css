@@ -135,7 +135,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 .svg {
   display: none;
   position: absolute;
-  z-index: -1000000;
+  z-index: -100;
 }
 
 .right-svg {
@@ -354,7 +354,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   background-position: center;
   position: absolute;
   bottom: -100rem;
-  z-index: -10;
+  z-index: -110;
   width: 100%;
 }
 #footer .footer-container {
@@ -452,8 +452,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   .left-svg-2 {
     position: absolute;
     right: 61rem;
+    z-index: 10 !important;
     top: -32rem;
-    overflow-x: hidden;
     right: 55rem !important;
   }
   .row {

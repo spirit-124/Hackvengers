@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 @font-face {
@@ -14,14 +16,15 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #000;
+  background-color: #000408;
+  background-image: linear-gradient(281deg, #000408 60%, #231173 100%);
   color: #fff;
   font-family: "Figtree", sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 h1 {
@@ -33,16 +36,68 @@ p {
   line-height: 1.8;
 }
 
+.cursor {
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 200000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.follower {
+  position: fixed;
+  top: -1rem;
+  left: -2rem;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(5, 53, 76, 0.5);
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 200000;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-top: 3.8em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 74, 105, 0.5);
+  border-radius: 100vw;
+}
+
 nav.navbar {
-  background: transparent !important;
+  background: rgba(0, 0, 0, 0.6) !important;
   top: 0;
   left: 0;
   position: fixed;
   width: 100%;
-  z-index: 10000000;
+  z-index: 1000;
 }
 nav.navbar .navbar-brand {
   display: none;
+}
+nav.navbar .navbar-brand .logo-up {
+  max-height: 1rem;
+  top: 0.6rem;
+  left: 6.5rem;
 }
 nav.navbar .navbar-nav .nav-item {
   margin-inline: 1rem;
@@ -61,13 +116,9 @@ nav.navbar .navbar-nav .nav-item .nav-link.active {
   display: flex;
   flex-direction: column;
 }
-nav.navbar .navbar-nav .nav-item .nav-link.active::after {
-  content: "";
-  display: block;
-  width: 4px;
-  height: 4px;
-  background: white;
-  border-radius: 50%;
+nav.navbar .collapse {
+  width: 100%;
+  background: transparent;
 }
 
 .btn-white-gradient {
@@ -75,26 +126,62 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   padding: 8px 20px;
   border-radius: 0;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 .btn-white-gradient a {
   color: white;
   text-decoration: none;
   transition: 0.4s ease;
+  z-index: 99;
+  position: relative;
+}
+.btn-white-gradient .btn-effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  top: 0;
+  left: -100%;
+  transition: left 1s ease;
+}
+.btn-white-gradient:hover .btn-effect {
+  left: 0 !important;
 }
 .btn-white-gradient:hover {
-  border-top: 3px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #hero {
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/HERO PATTERN.svg") no-repeat center;
   background-size: cover;
   height: 100vh;
   min-height: 100%;
 }
+#hero .bg-hero {
+  background-image: url("bg/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#hero #myVideo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100% !important;
+  height: 100vh !important;
+  background-position: center center;
+}
 #hero .hero-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.7));
+  position: absolute;
   min-height: 90vh;
   height: 100%;
   display: flex;
@@ -103,27 +190,65 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   flex-direction: column;
   background-size: cover;
   text-align: center;
+  min-width: 100vw !important;
 }
 #hero .hero-container h1 {
   font-family: "Mars-Project", sans-serif;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
 }
 #hero .hero-container p {
-  font-size: 1.3rem;
+  font-family: "Mars-Project", sans-serif;
+  font-size: 1.8rem;
+  color: #0099db;
 }
 
+.fade-in-text {
+  -webkit-animation: fadeIn 9s;
+          animation: fadeIn 9s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .blue-gradient-button {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(102.24deg, #00070a -137.58%, rgba(3, 18, 69, 0) 122.85%);
   color: white;
   font-family: "Figtree";
-  border: 1px solid #24caff;
+  border: 1px solid rgba(21, 69, 172, 0.4);
   padding: 10px 25px;
   margin-top: 3rem;
   border-radius: 0;
+}
+.blue-gradient-button:hover {
+  box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
+}
+
+.img-container {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background: #000408;
+  background-image: linear-gradient(281deg, #000408 60%, #231173 100%);
+  color: #fff;
 }
 
 #about {
@@ -134,13 +259,26 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   min-height: 100vh;
   height: 100%;
   padding-inline: 2rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+#about .about-container {
+  background: transparent;
 }
 #about .about-container h1 {
   font-family: "Mars-Project", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 1;
-  margin-bottom: 5rem;
 }
+#about .about-container p {
+  font-size: 1.1rem;
+}
+#about .about-container p span {
+  color: #0099db;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
 .svg {
   display: none;
   position: absolute;
@@ -153,7 +291,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 }
 
 .left-svg {
-  right: 61rem;
+  right: 50rem;
   top: 110rem;
 }
 
@@ -190,11 +328,12 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 5rem;
+  margin-top: 4rem;
 }
 #why .row .card {
   background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
-  height: 286px;
-  width: 286px;
+  height: 20rem !important;
+  width: 256px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -208,6 +347,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
 }
 #why .row .card .card-content p {
   padding: 0 20px;
+  line-height: 1.5;
+  font-weight: bold;
 }
 #why .row .card .card-content .card-img img {
   height: 330px;
@@ -217,8 +358,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   height: 23rem;
   z-index: 10;
   margin-top: 5rem;
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease-out;
+  box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
+  transition: all 0.2s ease-out;
   text-decoration: none;
 }
 #why .row .why-cards .card-content {
@@ -234,19 +375,19 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   z-index: 1;
 }
 #why .row .why-cards .card-content img.insight-img {
-  width: 12rem;
-  height: 9rem;
-  top: -187px;
+  width: 10rem;
+  height: 7rem;
+  top: -120px;
 }
 #why .row .why-cards .card-content img.bulb {
-  width: 11rem;
-  height: 12rem;
-  top: -220px;
+  width: 10rem;
+  height: 9rem;
+  top: -170px;
 }
 #why .row .why-cards .card-content img.rupee {
   width: 7rem;
-  height: 9rem;
-  top: -194px;
+  height: 7rem;
+  top: -154px;
 }
 #why .row .why-cards .card-content .rupee-card {
   top: -185px;
@@ -258,7 +399,62 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   text-transform: uppercase;
 }
 #why .row:hover .card:hover {
-  transform: translateY(-5px) scale(1.005) translateZ(0);
+  transform: translateY(-5px) scale(1.05) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+#supporter {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+#supporter .supporter-container .row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column !important;
+}
+#supporter .supporter-container .row .col h1,
+#supporter .supporter-container .row .col > h1 {
+  font-family: "Mars-Project", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#supporter .supporter-container .row .col .supporter-card {
+  height: 80%;
+  z-index: 10;
+  margin-top: 5rem;
+  overflow: hidden;
+  box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+#supporter .supporter-container .row .col .supporter-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 3rem 2rem;
+}
+#supporter .supporter-container .row .col .supporter-card .card-content img {
+  max-width: 10rem;
+  z-index: 1;
+}
+#supporter .supporter-container .row .col .supporter-card .card-content h1 {
+  color: #0099db;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+#supporter .supporter-container .row .col .supporter-card .card-content p {
+  font-size: 1.5rem;
+}
+#supporter .supporter-container .row .col .supporter-card:hover .supporter-card:hover {
+  transform: translateY(-5px) scale(1.05) translateZ(0);
   box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
 }
 
@@ -266,8 +462,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: flex-start;
-  height: 100%;
+  text-align: center;
+  height: 200%;
   min-height: 100vh;
   margin-bottom: 5rem;
 }
@@ -285,12 +481,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   gap: 3rem;
   align-items: center;
 }
-@media (min-width: 768px) {
-  #sponsors .sponsors-container .row {
-    text-align: start !important;
-    justify-content: flex-start !important;
-  }
-}
 #sponsors .sponsors-container .row h1 {
   margin-bottom: 2rem;
   margin-top: 5rem;
@@ -299,7 +489,8 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   letter-spacing: 1;
 }
 #sponsors .sponsors-container .row .card {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(102.24deg, #00070a -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4) !important;
   height: 11rem;
   width: 20rem;
   display: flex;
@@ -313,7 +504,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   height: 4rem;
 }
 #sponsors .sponsors-container .row #sponserBtn {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 #organizers {
@@ -355,7 +546,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   align-items: center;
   position: relative;
   text-align: center;
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/HERO PATTERN.svg") no-repeat center;
   background-size: cover;
   -webkit-backdrop-filter: 40px;
           backdrop-filter: 40px;
@@ -375,7 +565,7 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 4rem;
+  gap: 10rem;
 }
 #footer .footer-container .logo {
   display: inline;
@@ -397,20 +587,31 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   height: 5rem;
   width: 18rem;
   position: relative;
-  margin-bottom: 3rem;
   z-index: 3;
 }
 #footer .socials {
   display: flex;
+  margin-top: -6rem;
   gap: 20px;
+}
+#footer .socials .social-icon {
+  transition: transform 0.7s ease-in-out;
+}
+#footer .socials .social-icon:hover {
+  transform: rotate(360deg);
 }
 
 #organizers .card {
   background-color: transparent;
   z-index: 100000;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-out;
+  text-decoration: none;
 }
 #organizers .card .card-img {
-  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  background: linear-gradient(102.24deg, #00070a -137.58%, rgba(3, 18, 69, 0) 122.85%);
+  box-shadow: 0 14px 26px rgba(38, 83, 156, 0.4);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -427,24 +628,40 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   border-radius: 50%;
   transition: all 0.6s ease-in-out;
 }
+#organizers .card .content h3 {
+  font-family: "Mars-Project", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+#organizers .card .content p {
+  font-size: 1.3rem;
+  color: #0099db;
+}
+#organizers:hover .card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
+}
+#organizers:hover .card:hover .card-img {
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0);
+}
 
 .gradient-text {
   background-size: 100%;
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.platinum-heading {
-  background-image: linear-gradient(180deg, rgb(255, 255, 255) 10%, rgb(141, 128, 214) 100%) !important;
+  margin-bottom: 4rem !important;
+  margin-top: 8rem !important;
 }
 
 .golden-heading {
   background-image: linear-gradient(180deg, rgb(241, 169, 8) 0%, rgb(194, 237, 11) 100%);
+  text-shadow: -3px 17px 17px rgba(153, 69, 9, 0.77);
 }
 
 .silver-heading {
   background-image: linear-gradient(180deg, rgb(162, 252, 232) 1%, rgb(71, 60, 134) 100%) !important;
+  text-shadow: -3px 17px 17px rgba(153, 146, 145, 0.77);
 }
 
 @media (min-width: 768px) {
@@ -462,7 +679,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   }
   .left-svg {
     position: absolute;
-    right: 61rem;
     top: 110rem;
   }
   .right-svg-1 {
@@ -470,13 +686,6 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
     right: -28rem;
     top: 173rem;
     display: none;
-  }
-  .left-svg-2 {
-    position: absolute;
-    right: 61rem;
-    z-index: 10 !important;
-    top: -32rem;
-    right: 55rem !important;
   }
   #organizers .row {
     display: flex;
@@ -494,11 +703,24 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   nav.navbar {
     border-bottom: 1px solid white;
   }
+  .hero-container h1 {
+    font-size: 7rem !important;
+  }
+  .hero-container p {
+    font-size: 2.8rem !important;
+  }
+  .about-container p {
+    font-size: 1.5rem;
+  }
+  .about-container p span {
+    font-size: 1.7rem;
+  }
   .right-svg-1 {
     display: none;
   }
   .left-svg-2 {
-    right: 39rem !important;
+    top: 50rem;
+    right: 55rem !important;
   }
   #sponsors .sponsors-container .row {
     gap: 1rem !important;
@@ -549,5 +771,619 @@ nav.navbar .navbar-nav .nav-item .nav-link.active::after {
   .left-svg {
     right: 67rem !important;
     display: none;
+    top: 100rem;
+  }
+  .right-svg-1 {
+    display: block;
+    z-index: -100;
+    display: none !important;
+  }
+}
+.platinum-heading {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), conic-gradient(from 180deg at 48.5% 50%, #ffffff -48.57deg, #868686 130.63deg, #ffffff 133.38deg, #a49dcd 204.46deg, #ffffff 279.38deg, #ffffff 311.43deg, #868686 490.63deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-blend-mode: overlay, normal;
+  mix-blend-mode: screen;
+  filter: blur(0.5px);
+  text-shadow: -3px 17px 17px rgba(180, 184, 174, 0.77);
+}
+
+.glow-on-hover {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(102.24deg, #00b2ff -137.58%, rgba(3, 18, 69, 0) 122.85%) !important;
+  z-index: 0;
+  border-radius: 3px;
+  padding: 10px 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Figtree";
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.8552px;
+  line-height: 29px;
+  background: transparent;
+  box-shadow: 0px 8.82451px 35.298px rgba(104, 1, 255, 0.12);
+  border: 0.5px solid rgba(252, 251, 251, 0.03);
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 0.7;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.logo-up {
+  max-height: 4rem;
+  max-width: 4rem;
+  position: absolute;
+  top: -2.7rem;
+  right: 5.8rem;
+  -webkit-animation: all 1s infinite;
+          animation: all 1s infinite;
+}
+
+@-webkit-keyframes all {
+  0% {
+    transform: skew(15deg, 15deg);
+  }
+  50% {
+    transform: skew(-0.06turn, 18deg);
+  }
+  100% {
+    transform: skew(0.312rad);
+  }
+}
+
+@keyframes all {
+  0% {
+    transform: skew(15deg, 15deg);
+  }
+  50% {
+    transform: skew(-0.06turn, 18deg);
+  }
+  100% {
+    transform: skew(0.312rad);
+  }
+}
+#app {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.sub {
+  color: rgb(100, 220, 220);
+  letter-spacing: 1em;
+}
+
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+  /* Animation provies a slight random skew. Check bottom of doc
+  for more information on how to random skew. */
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  /* Creates an initial clip for our glitch. This works in
+  a typical top,right,bottom,left fashion and creates a mask
+  to only show a certain part of the glitch at a time. */
+  clip: rect(44px, 450px, 56px, 0);
+  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+  with an alternating animation to keep things fresh. */
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+/* Creates an animation with 20 steaps. For each step, it calculates 
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+@-webkit-keyframes glitch-anim {
+  0% {
+    clip: rect(45px, 9999px, 79px, 0);
+    transform: skew(0.04deg);
+  }
+  5% {
+    clip: rect(91px, 9999px, 28px, 0);
+    transform: skew(0.09deg);
+  }
+  10% {
+    clip: rect(50px, 9999px, 9px, 0);
+    transform: skew(0.17deg);
+  }
+  15% {
+    clip: rect(17px, 9999px, 59px, 0);
+    transform: skew(0.82deg);
+  }
+  20% {
+    clip: rect(98px, 9999px, 41px, 0);
+    transform: skew(0.15deg);
+  }
+  25% {
+    clip: rect(84px, 9999px, 56px, 0);
+    transform: skew(0.23deg);
+  }
+  30% {
+    clip: rect(85px, 9999px, 72px, 0);
+    transform: skew(0.15deg);
+  }
+  35% {
+    clip: rect(3px, 9999px, 30px, 0);
+    transform: skew(0.54deg);
+  }
+  40% {
+    clip: rect(42px, 9999px, 47px, 0);
+    transform: skew(0.39deg);
+  }
+  45% {
+    clip: rect(86px, 9999px, 78px, 0);
+    transform: skew(0.06deg);
+  }
+  50% {
+    clip: rect(22px, 9999px, 65px, 0);
+    transform: skew(0.67deg);
+  }
+  55% {
+    clip: rect(27px, 9999px, 8px, 0);
+    transform: skew(0.59deg);
+  }
+  60% {
+    clip: rect(46px, 9999px, 10px, 0);
+    transform: skew(0.04deg);
+  }
+  65% {
+    clip: rect(64px, 9999px, 64px, 0);
+    transform: skew(0.58deg);
+  }
+  70% {
+    clip: rect(23px, 9999px, 82px, 0);
+    transform: skew(0.4deg);
+  }
+  75% {
+    clip: rect(84px, 9999px, 41px, 0);
+    transform: skew(0.89deg);
+  }
+  80% {
+    clip: rect(47px, 9999px, 66px, 0);
+    transform: skew(0.49deg);
+  }
+  85% {
+    clip: rect(64px, 9999px, 87px, 0);
+    transform: skew(0.22deg);
+  }
+  90% {
+    clip: rect(57px, 9999px, 49px, 0);
+    transform: skew(0.71deg);
+  }
+  95% {
+    clip: rect(40px, 9999px, 26px, 0);
+    transform: skew(0.8deg);
+  }
+  100% {
+    clip: rect(97px, 9999px, 17px, 0);
+    transform: skew(0.5deg);
+  }
+}
+@keyframes glitch-anim {
+  0% {
+    clip: rect(45px, 9999px, 79px, 0);
+    transform: skew(0.04deg);
+  }
+  5% {
+    clip: rect(91px, 9999px, 28px, 0);
+    transform: skew(0.09deg);
+  }
+  10% {
+    clip: rect(50px, 9999px, 9px, 0);
+    transform: skew(0.17deg);
+  }
+  15% {
+    clip: rect(17px, 9999px, 59px, 0);
+    transform: skew(0.82deg);
+  }
+  20% {
+    clip: rect(98px, 9999px, 41px, 0);
+    transform: skew(0.15deg);
+  }
+  25% {
+    clip: rect(84px, 9999px, 56px, 0);
+    transform: skew(0.23deg);
+  }
+  30% {
+    clip: rect(85px, 9999px, 72px, 0);
+    transform: skew(0.15deg);
+  }
+  35% {
+    clip: rect(3px, 9999px, 30px, 0);
+    transform: skew(0.54deg);
+  }
+  40% {
+    clip: rect(42px, 9999px, 47px, 0);
+    transform: skew(0.39deg);
+  }
+  45% {
+    clip: rect(86px, 9999px, 78px, 0);
+    transform: skew(0.06deg);
+  }
+  50% {
+    clip: rect(22px, 9999px, 65px, 0);
+    transform: skew(0.67deg);
+  }
+  55% {
+    clip: rect(27px, 9999px, 8px, 0);
+    transform: skew(0.59deg);
+  }
+  60% {
+    clip: rect(46px, 9999px, 10px, 0);
+    transform: skew(0.04deg);
+  }
+  65% {
+    clip: rect(64px, 9999px, 64px, 0);
+    transform: skew(0.58deg);
+  }
+  70% {
+    clip: rect(23px, 9999px, 82px, 0);
+    transform: skew(0.4deg);
+  }
+  75% {
+    clip: rect(84px, 9999px, 41px, 0);
+    transform: skew(0.89deg);
+  }
+  80% {
+    clip: rect(47px, 9999px, 66px, 0);
+    transform: skew(0.49deg);
+  }
+  85% {
+    clip: rect(64px, 9999px, 87px, 0);
+    transform: skew(0.22deg);
+  }
+  90% {
+    clip: rect(57px, 9999px, 49px, 0);
+    transform: skew(0.71deg);
+  }
+  95% {
+    clip: rect(40px, 9999px, 26px, 0);
+    transform: skew(0.8deg);
+  }
+  100% {
+    clip: rect(97px, 9999px, 17px, 0);
+    transform: skew(0.5deg);
+  }
+}
+@-webkit-keyframes glitch-anim2 {
+  0% {
+    clip: rect(47px, 9999px, 32px, 0);
+    transform: skew(0.69deg);
+  }
+  5% {
+    clip: rect(13px, 9999px, 39px, 0);
+    transform: skew(0.6deg);
+  }
+  10% {
+    clip: rect(66px, 9999px, 22px, 0);
+    transform: skew(0.5deg);
+  }
+  15% {
+    clip: rect(68px, 9999px, 75px, 0);
+    transform: skew(0.33deg);
+  }
+  20% {
+    clip: rect(83px, 9999px, 2px, 0);
+    transform: skew(0.93deg);
+  }
+  25% {
+    clip: rect(28px, 9999px, 7px, 0);
+    transform: skew(0.25deg);
+  }
+  30% {
+    clip: rect(3px, 9999px, 37px, 0);
+    transform: skew(0.07deg);
+  }
+  35% {
+    clip: rect(31px, 9999px, 31px, 0);
+    transform: skew(0.34deg);
+  }
+  40% {
+    clip: rect(8px, 9999px, 22px, 0);
+    transform: skew(0.3deg);
+  }
+  45% {
+    clip: rect(69px, 9999px, 70px, 0);
+    transform: skew(0.74deg);
+  }
+  50% {
+    clip: rect(40px, 9999px, 61px, 0);
+    transform: skew(0.18deg);
+  }
+  55% {
+    clip: rect(20px, 9999px, 43px, 0);
+    transform: skew(0.08deg);
+  }
+  60% {
+    clip: rect(17px, 9999px, 18px, 0);
+    transform: skew(0.97deg);
+  }
+  65% {
+    clip: rect(57px, 9999px, 98px, 0);
+    transform: skew(0.81deg);
+  }
+  70% {
+    clip: rect(81px, 9999px, 40px, 0);
+    transform: skew(0.96deg);
+  }
+  75% {
+    clip: rect(73px, 9999px, 8px, 0);
+    transform: skew(0.06deg);
+  }
+  80% {
+    clip: rect(54px, 9999px, 19px, 0);
+    transform: skew(0.94deg);
+  }
+  85% {
+    clip: rect(13px, 9999px, 17px, 0);
+    transform: skew(0.65deg);
+  }
+  90% {
+    clip: rect(61px, 9999px, 73px, 0);
+    transform: skew(0.01deg);
+  }
+  95% {
+    clip: rect(80px, 9999px, 72px, 0);
+    transform: skew(0.72deg);
+  }
+  100% {
+    clip: rect(8px, 9999px, 1px, 0);
+    transform: skew(0.85deg);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(47px, 9999px, 32px, 0);
+    transform: skew(0.69deg);
+  }
+  5% {
+    clip: rect(13px, 9999px, 39px, 0);
+    transform: skew(0.6deg);
+  }
+  10% {
+    clip: rect(66px, 9999px, 22px, 0);
+    transform: skew(0.5deg);
+  }
+  15% {
+    clip: rect(68px, 9999px, 75px, 0);
+    transform: skew(0.33deg);
+  }
+  20% {
+    clip: rect(83px, 9999px, 2px, 0);
+    transform: skew(0.93deg);
+  }
+  25% {
+    clip: rect(28px, 9999px, 7px, 0);
+    transform: skew(0.25deg);
+  }
+  30% {
+    clip: rect(3px, 9999px, 37px, 0);
+    transform: skew(0.07deg);
+  }
+  35% {
+    clip: rect(31px, 9999px, 31px, 0);
+    transform: skew(0.34deg);
+  }
+  40% {
+    clip: rect(8px, 9999px, 22px, 0);
+    transform: skew(0.3deg);
+  }
+  45% {
+    clip: rect(69px, 9999px, 70px, 0);
+    transform: skew(0.74deg);
+  }
+  50% {
+    clip: rect(40px, 9999px, 61px, 0);
+    transform: skew(0.18deg);
+  }
+  55% {
+    clip: rect(20px, 9999px, 43px, 0);
+    transform: skew(0.08deg);
+  }
+  60% {
+    clip: rect(17px, 9999px, 18px, 0);
+    transform: skew(0.97deg);
+  }
+  65% {
+    clip: rect(57px, 9999px, 98px, 0);
+    transform: skew(0.81deg);
+  }
+  70% {
+    clip: rect(81px, 9999px, 40px, 0);
+    transform: skew(0.96deg);
+  }
+  75% {
+    clip: rect(73px, 9999px, 8px, 0);
+    transform: skew(0.06deg);
+  }
+  80% {
+    clip: rect(54px, 9999px, 19px, 0);
+    transform: skew(0.94deg);
+  }
+  85% {
+    clip: rect(13px, 9999px, 17px, 0);
+    transform: skew(0.65deg);
+  }
+  90% {
+    clip: rect(61px, 9999px, 73px, 0);
+    transform: skew(0.01deg);
+  }
+  95% {
+    clip: rect(80px, 9999px, 72px, 0);
+    transform: skew(0.72deg);
+  }
+  100% {
+    clip: rect(8px, 9999px, 1px, 0);
+    transform: skew(0.85deg);
+  }
+}
+@-webkit-keyframes glitch-skew {
+  0% {
+    transform: skew(4deg);
+  }
+  10% {
+    transform: skew(-3deg);
+  }
+  20% {
+    transform: skew(5deg);
+  }
+  30% {
+    transform: skew(-1deg);
+  }
+  40% {
+    transform: skew(1deg);
+  }
+  50% {
+    transform: skew(2deg);
+  }
+  60% {
+    transform: skew(0deg);
+  }
+  70% {
+    transform: skew(-3deg);
+  }
+  80% {
+    transform: skew(-1deg);
+  }
+  90% {
+    transform: skew(-3deg);
+  }
+  100% {
+    transform: skew(5deg);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(4deg);
+  }
+  10% {
+    transform: skew(-3deg);
+  }
+  20% {
+    transform: skew(5deg);
+  }
+  30% {
+    transform: skew(-1deg);
+  }
+  40% {
+    transform: skew(1deg);
+  }
+  50% {
+    transform: skew(2deg);
+  }
+  60% {
+    transform: skew(0deg);
+  }
+  70% {
+    transform: skew(-3deg);
+  }
+  80% {
+    transform: skew(-1deg);
+  }
+  90% {
+    transform: skew(-3deg);
+  }
+  100% {
+    transform: skew(5deg);
   }
 }/*# sourceMappingURL=style.css.map */

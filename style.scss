@@ -519,9 +519,11 @@ nav.navbar {
   min-height: 100vh;
   height: 100%;
   overflow: hidden;
+  margin-bottom: 3rem;
 
   .supporter-container {
     // margin-bottom: 5rem;
+    justify-content: center;
     .row {
       display: flex;
       justify-content: center;

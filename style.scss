@@ -598,10 +598,9 @@ nav.navbar {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 200%;
+  height: 100%;
   min-height: 100vh;
   margin-bottom: 5rem;
-  margin-top: 3rem;
 
   .sponsors-container {
     & > h1 {
@@ -612,6 +611,7 @@ nav.navbar {
       // text-transform: uppercase;
       letter-spacing: 1;
       margin-bottom: 5rem;
+      margin-top: 3rem !important;
     }
 
     .row {

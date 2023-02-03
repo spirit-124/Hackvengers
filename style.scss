@@ -44,18 +44,18 @@ p {
   line-height: 1.8;
 }
 
-// .cursor {
-//   position: fixed;
-//   top: -1rem;
-//   left: -1rem;
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 50%;
-//   background-color: #fff;
-//   z-index: 200000;
-//   user-select: none;
-//   pointer-events: none;
-// }
+.cursor {
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 200000;
+  user-select: none;
+  pointer-events: none;
+}
 .follower {
   position: fixed;
   top: -2rem;

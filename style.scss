@@ -43,6 +43,7 @@ h1 {
   font-style: normal;
   font-weight: 900 !important;
   // font-size: 96px;
+  font-size: 3.2rem;
   line-height: 115px;
 
   color: #3683f5;
@@ -95,6 +96,10 @@ p {
 ::-webkit-scrollbar-thumb {
   background: rgba(6, 74, 105, 0.5);
   border-radius: 100vw;
+}
+
+.wrapper {
+  padding-inline: 1rem;
 }
 
 nav.navbar {
@@ -423,21 +428,6 @@ nav.navbar {
       align-items: center;
       flex-wrap: wrap;
 
-      // @media (min-width: 768px) {
-      //   text-align: start !important;
-      //   justify-content: flex-start !important;
-      // }
-
-      // h1 {
-      //   margin-bottom: 2rem;
-      //   margin-top: 5rem;
-
-      //   // font-size: 4rem;
-      //   font-weight: 700;
-      //   text-transform: uppercase;
-      //   letter-spacing: 1;
-      // }
-
       .card {
         background: linear-gradient(
           102.24deg,
@@ -446,8 +436,8 @@ nav.navbar {
         );
         box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4) !important;
 
-        height: 11rem;
-        width: 16rem;
+        height: 8rem;
+        width: 8rem;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -455,14 +445,14 @@ nav.navbar {
         .card-content {
           .logo {
             img {
-              height: 4rem;
+              height: 2rem;
               // width: 5rem;
             }
           }
           .text {
             text-align: center;
-            h1 {
-              // font-size: 1.4rem;
+            h4 {
+              font-size: 1rem;
               color: white;
             }
           }
@@ -513,7 +503,7 @@ nav.navbar {
         // font-size: 3rem;
         font-weight: 400;
         // text-transform: uppercase;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
         margin-bottom: 5rem;
         margin-top: 4rem;
       }
@@ -526,7 +516,7 @@ nav.navbar {
         rgba(3, 18, 69, 0) 122.85%
       );
 
-      height: 19rem !important;
+      height: 19rem;
       // border-radius: 50%;
       width: 16rem;
       //   border: 2px solid white;
@@ -566,21 +556,7 @@ nav.navbar {
       }
     }
 
-    .gold-card {
-      height: 27rem !important;
-      width: 23rem;
-
-      padding: 2rem;
-      .card-content {
-        h1 {
-          font-size: 5rem !important;
-        }
-        h2 {
-          font-size: 2rem;
-          line-height: 48px;
-        }
-      }
-    }
+    //
 
     .why-cards {
       margin-top: 5rem;
@@ -658,31 +634,34 @@ nav.navbar {
 
   .supporter-container {
     // margin-bottom: 5rem;
-    justify-content: center;
     .row {
       display: flex;
       justify-content: center;
       flex-direction: column !important;
 
       .col {
-        // display: flex;
-        // justify-content: center;
+        // justify-content: center !important;
         // align-items: center;
         // text-align: center;
+        // display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         // z-index: 100;
 
         h1,
         > h1 {
           font-family: "Mars-Project", sans-serif;
-          // font-size: 3rem;
+          font-size: 3.2rem;
           font-weight: 400;
           // text-transform: uppercase;
-          letter-spacing: 1px;
+          letter-spacing: -1px;
           // margin-bottom: 5rem;
           // margin-top: 4rem;
         }
         .supporter-card {
-          height: 80%;
+          height: 100%;
           z-index: 10;
           margin-top: 5rem;
           overflow: hidden;
@@ -700,9 +679,9 @@ nav.navbar {
               max-width: 10rem;
               z-index: 1;
             }
-            h1 {
+            h2 {
               color: #0099db;
-              font-size: 2rem;
+              font-size: 2.5rem;
               font-weight: 700;
               text-transform: uppercase;
               margin-bottom: 2rem;
@@ -741,14 +720,7 @@ nav.navbar {
 
   .sponsors-container {
     & > h1 {
-      text-align: center;
-      font-family: "Mars-Project", sans-serif;
-      // font-size: 4rem;
-      font-weight: 400;
-      // text-transform: uppercase;
-      letter-spacing: 1;
-      margin-bottom: 5rem;
-      margin-top: 3rem !important;
+      font-size: 3rem;
     }
 
     .row {
@@ -763,14 +735,22 @@ nav.navbar {
       //   justify-content: flex-start !important;
       // }
 
-      h1 {
-        margin-bottom: 2rem;
-        margin-top: 5rem;
+      // h1 {
+      //   margin-bottom: 2rem;
+      //   margin-top: 5rem;
 
-        // font-size: 4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1;
+      //   font-size: 2.5rem;
+      //   font-weight: 700;
+      //   text-transform: uppercase;
+      //   // letter-spacing: 1;
+      // }
+
+      .col {
+        img {
+          max-width: 20rem;
+          margin-block: 2rem;
+          margin-top: 5rem;
+        }
       }
 
       .card {
@@ -779,7 +759,7 @@ nav.navbar {
           #00070a -137.58%,
           rgba(3, 18, 69, 0) 122.85%
         );
-        box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4) !important;
+        box-shadow: 1px 1px 15px rgba(21, 69, 172, 0.4) !important;
 
         height: 11rem;
         width: 20rem;
@@ -1042,7 +1022,7 @@ nav.navbar {
     rgba(241, 169, 8, 1) 0%,
     rgba(194, 237, 11, 1) 100%
   );
-  text-shadow: 3px 10px 10px rgba(153, 69, 9, 1.9);
+  text-shadow: 3px 1px 1px rgba(153, 69, 9, 1.9);
 }
 
 .silver-heading {
@@ -1051,7 +1031,7 @@ nav.navbar {
     rgb(162, 252, 232) 1%,
     rgb(71, 60, 134) 100%
   ) !important;
-  text-shadow: -3px 10px 10px rgba(153, 146, 145, 0.7);
+  text-shadow: -3px 1px 1px rgba(153, 146, 145, 0.7);
 }
 @media (min-width: 768px) {
   .navbar-brand {
@@ -1129,7 +1109,75 @@ nav.navbar {
   //   }
   // }
   h1 {
-    font-size: 4rem;
+    font-size: 4rem !important;
+  }
+
+  .gold-card {
+    height: 29rem !important;
+    width: 23rem !important;
+
+    padding: 2rem;
+    .card-content {
+      h1 {
+        font-size: 7rem;
+      }
+      h2 {
+        // font-size: 3rem;
+        line-height: 48px;
+      }
+    }
+  }
+
+  #sponsors {
+    .row {
+      .col {
+        img {
+          max-width: 40rem !important;
+        }
+      }
+    }
+  }
+
+  #tracks {
+    .row {
+      .card {
+        background: linear-gradient(
+          102.24deg,
+          #00070a -137.58%,
+          rgba(3, 18, 69, 0) 122.85%
+        );
+        box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4) !important;
+
+        height: 12rem !important;
+        width: 16rem !important;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .card-content {
+          .logo {
+            img {
+              height: 5rem !important;
+              // width: 5rem;
+            }
+          }
+          .text {
+            text-align: center;
+            h4 {
+              font-size: 1.5rem !important;
+              color: white;
+            }
+          }
+        }
+        box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease-out;
+        text-decoration: none;
+      }
+      .open-card {
+        width: 35rem !important;
+        height: 8rem;
+      }
+    }
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1331,7 +1379,7 @@ nav.navbar {
   background-blend-mode: overlay, normal;
   mix-blend-mode: screen;
   filter: blur(0.5px);
-  text-shadow: 3px 10px 10px rgba(180, 184, 174, 0.29);
+  text-shadow: -3px 1px 1px rgba(180, 184, 174, 0.29);
 }
 
 // .golden-heading {

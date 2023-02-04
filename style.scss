@@ -28,15 +28,24 @@ html {
 body {
   // background: $body-background;
   background-color: #000408;
-  background-image: linear-gradient(281deg, #000408 60%, #231173 100%);
+  // background: #101010;
+  background-image: linear-gradient(271deg, #000408 60%, #090324 100%);
   color: #fff;
   font-family: "Figtree", sans-serif;
   overflow: hidden;
 }
 
 h1 {
-  font-size: 3rem;
+  // font-size: 3rem;
+  font-family: "Figtree" !important;
   // font-weight: 400;
+  // font-family: "Figtree";
+  font-style: normal;
+  font-weight: 900 !important;
+  // font-size: 96px;
+  line-height: 115px;
+
+  color: #3683f5;
 }
 
 p {
@@ -101,10 +110,16 @@ nav.navbar {
 
   .navbar-brand {
     display: none;
+    position: relative;
     .logo-up {
-      max-height: 1rem;
-      top: 0.6rem;
-      left: 6.5rem;
+      // max-height: 3.5rem;
+      // max-width: 3.5rem;
+      height: 1rem;
+      position: absolute;
+      top: 0rem;
+      left: 3.5rem;
+
+      animation: all 1s infinite;
     }
   }
 
@@ -169,6 +184,12 @@ nav.navbar {
     transition: 0.4s ease;
     z-index: 99;
     position: relative;
+    span {
+      img {
+        max-width: 1.3rem;
+        margin-right: 0.3rem;
+      }
+    }
 
     // &:hover {
     //   color: rgba(255, 255, 255, 0.5);
@@ -244,7 +265,7 @@ nav.navbar {
     min-width: 100vw !important;
 
     h1 {
-      font-family: "Mars-Project", sans-serif;
+      font-family: "Mars-Project", sans-serif !important;
       font-size: 4rem;
       font-weight: 200;
       text-transform: uppercase;
@@ -281,12 +302,15 @@ nav.navbar {
     rgba(3, 18, 69, 0) 122.85%
   );
   // padding: 10px;
-  color: white;
-  font-family: "Figtree";
   border: 1px solid rgba(21, 69, 172, 0.4);
   padding: 10px 25px;
   margin-top: 3rem;
   border-radius: 0;
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "Figtree";
+  }
 
   &:hover {
     box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
@@ -314,6 +338,9 @@ nav.navbar {
   // background-color: #000408;
   // background-image: linear-gradient(281deg, #000408 60%, #231173 100%);
   // color: #fff;
+  background-color: #000408;
+  // background: #101010;
+  background-image: linear-gradient(271deg, #000408 60%, #090324 100%);
   overflow: hidden;
   margin-bottom: 5rem;
 
@@ -367,6 +394,94 @@ nav.navbar {
   top: -32rem;
 }
 
+#tracks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+
+  .track-container {
+    & > h1 {
+      text-align: center;
+      font-family: "Mars-Project", sans-serif;
+      // font-size: 4rem;
+      font-weight: 400;
+      // text-transform: uppercase;
+      letter-spacing: 1;
+      margin-bottom: 5rem;
+      margin-top: 3rem !important;
+    }
+
+    .row {
+      display: flex;
+      text-align: center !important;
+      justify-content: center;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+
+      // @media (min-width: 768px) {
+      //   text-align: start !important;
+      //   justify-content: flex-start !important;
+      // }
+
+      // h1 {
+      //   margin-bottom: 2rem;
+      //   margin-top: 5rem;
+
+      //   // font-size: 4rem;
+      //   font-weight: 700;
+      //   text-transform: uppercase;
+      //   letter-spacing: 1;
+      // }
+
+      .card {
+        background: linear-gradient(
+          102.24deg,
+          #00070a -137.58%,
+          rgba(3, 18, 69, 0) 122.85%
+        );
+        box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4) !important;
+
+        height: 11rem;
+        width: 16rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .card-content {
+          .logo {
+            img {
+              height: 4rem;
+              // width: 5rem;
+            }
+          }
+          .text {
+            text-align: center;
+            h1 {
+              // font-size: 1.4rem;
+              color: white;
+            }
+          }
+        }
+        box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease-out;
+        text-decoration: none;
+      }
+      &:hover {
+        .card:hover {
+          transform: translateY(-5px) scale(1.05) translateZ(0);
+          box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+            0 24px 46px var(--box-shadow-color);
+        }
+      }
+    }
+  }
+}
+
 #why {
   min-height: 100vh;
   height: 100%;
@@ -384,6 +499,7 @@ nav.navbar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 
     .col {
       display: flex;
@@ -400,12 +516,6 @@ nav.navbar {
         letter-spacing: 1px;
         margin-bottom: 5rem;
         margin-top: 4rem;
-        // color: rgb(226, 215, 48);
-        // color: linear-gradient(
-        //   90deg,
-        //   rgba(226, 215, 48, 1) 0%,
-        //   rgba(198, 158, 12, 1) 100%
-        // );
       }
     }
 
@@ -416,14 +526,15 @@ nav.navbar {
         rgba(3, 18, 69, 0) 122.85%
       );
 
-      height: 20rem !important;
+      height: 19rem !important;
       // border-radius: 50%;
-      width: 256px;
+      width: 16rem;
       //   border: 2px solid white;
       display: flex;
       justify-content: center;
       text-align: center;
       margin-bottom: 4rem;
+      padding: 2rem;
 
       .card-content {
         z-index: 10;
@@ -435,6 +546,12 @@ nav.navbar {
           padding: 0 20px;
           line-height: 1.5;
           font-weight: bold;
+        }
+
+        h1 {
+          font-weight: 900 !important;
+          font-size: 4rem !important;
+          color: #fff !important;
         }
 
         .card-img {
@@ -449,11 +566,29 @@ nav.navbar {
       }
     }
 
-    .why-cards {
-      height: 23rem;
-      z-index: 10;
-      margin-top: 5rem;
+    .gold-card {
+      height: 27rem !important;
+      width: 23rem;
 
+      padding: 2rem;
+      .card-content {
+        h1 {
+          font-size: 5rem !important;
+        }
+        h2 {
+          font-size: 2rem;
+          line-height: 48px;
+        }
+      }
+    }
+
+    .why-cards {
+      margin-top: 5rem;
+      background: linear-gradient(
+        102.24deg,
+        #00070a -137.58%,
+        rgba(3, 18, 69, 0) 122.85%
+      );
       .card-content {
         display: flex;
         flex-direction: column;
@@ -470,22 +605,22 @@ nav.navbar {
           z-index: 1;
         }
 
-        img.insight-img {
-          width: 10rem;
-          height: 7rem;
-          top: -120px;
+        img.gold-coin {
+          width: 12rem;
+          height: 12rem;
+          top: -12.5rem;
         }
 
-        img.bulb {
-          width: 10rem;
-          height: 9rem;
-          top: -170px;
+        img.silver-coin {
+          width: 8rem;
+          height: 8rem;
+          top: -7rem;
         }
 
-        img.rupee {
-          width: 7rem;
-          height: 7rem;
-          top: -154px;
+        img.bronze-coin {
+          width: 8rem;
+          height: 8rem;
+          top: -7rem;
         }
 
         .rupee-card {
@@ -1328,10 +1463,10 @@ nav.navbar {
 
 @keyframes all {
   0% {
-    transform: skew(15deg, 15deg);
+    transform: skew(10deg, 10deg);
   }
   50% {
-    transform: skew(-0.06turn, 18deg);
+    transform: skew(-0.03turn, 18deg);
   }
   100% {
     transform: skew(0.312rad);

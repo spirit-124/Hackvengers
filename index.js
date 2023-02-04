@@ -1,6 +1,6 @@
-sponserBtn.addEventListener("click", function () {
-  document.location.href = "https://forms.gle/UjCT6LfjXCXEpAXK6";
-});
+// sponserBtn.addEventListener("click", function () {
+//   document.location.href = "https://forms.gle/UjCT6LfjXCXEpAXK6";
+// });
 
 // var cursor = document.querySelector(".cursor"),
 //   cursorScale = document.querySelectorAll(".cursor-scale"),

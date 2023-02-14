@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="Join the Hackvengers and unleash your inner tech superhero. Build innovative solutions and become part of the community.">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hackvengers</title>
+    <link rel="canonical" href="https://hackvengers.co/" />
+    
 
     <!-- Aos Link  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -17,15 +20,37 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+       <!-- Google tag (gtag.js) -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-4X4935M4WS"></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+   
+         gtag('config', 'G-4X4935M4WS');
+       </script>
+         <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://hackvengers.co/",
+            "name": "Hackvengers",
+            "description": "Join the Hackvengers and unleash your inner tech superhero",
+          }
+          </script>
+      
+
+      <!-- APPly with Devfolio Button SDK -->
+      <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
   </head>
   <body>
     <div class="cursor"></div>
     <div class="follower"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-out">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
       <div class="container-fluid px-5">
         <a class="navbar-brand" href="#">
           <img src="./logos/Hackvengers_logo.png" alt="Bootstrap" height="24" />
-          <img class="logo-up" src="./logos/logo-up.png" alt="" height="24" />
+          <img class="logo-up" src="./logos/logo-up.png" alt="Image" height="24" />
         </a>
         <button
           class="navbar-toggler"
@@ -63,15 +88,35 @@
                 >Brochure</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://devfolio.co/code-of-conduct"
+                target="_blank"
+                >Code Of Conduct</a
+              >
+            </li>
           </ul>
+          
           <div class="d-flex justify-content-center">
             <button class="btn btn-white-gradient">
-              <a href="#">
-                <span><img src="./assets/Devfolio-logo.png" alt="" /></span>
-                Register Now
+              <a href="https://forms.gle/UjCT6LfjXCXEpAXK6" target="_blank">
+                <!-- <span><img src="./assets/Devfolio-logo.png" alt="Image" /></span> -->
+                Sponsor Us
               </a>
               <div class="btn-effect"></div>
             </button>
+            <!-- <button
+            type="button"
+            class="blue-gradient-button btn glow-on-hover"
+            id="sponserBtn"
+          >
+            <a href="https://forms.gle/UjCT6LfjXCXEpAXK6" target="_blank"
+              >Sponsor Us</a
+            >
+          </button> -->
+          
           </div>
         </div>
       </div>
@@ -100,14 +145,20 @@
           glitch">glitch</h1>
           </div> -->
           <p>6th - 7th March</p>
-          <button type="button" class="blue-gradient-button btn glow-on-hover">
+          <!-- <button type="button" class="blue-gradient-button btn glow-on-hover">
             <a href=" https://www.instagram.com/hack_vengers/" target="_blank">
               <span
-                ><img src="./assets/Devfolio-logo.png" alt="" height="23"
+                ><img src="./assets/Devfolio-logo.png" alt="Image" height="23"
               /></span>
               Register with DEVFOLIO
             </a>
-          </button>
+          </button> -->
+          <div 
+          class="apply-button" 
+          data-hackathon-slug="hack-vengers" 
+          data-button-theme="light"
+          style="height: 44px; width: 312px"
+        ></div>
         </div>
       </div>
     </section>
@@ -134,7 +185,7 @@
     <div class="wrapper">
       <section id="tracks">
         <!-- <div class="right-svg svg">
-          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="" />
+          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="Image" />
         </div> -->
         <div class="container track-container">
           <div class="row">
@@ -147,12 +198,12 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/ar 1.png" alt="" />
+                  <img src="./assets/ar 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
                     Augmented & <br />
-                    Virtual Rality
+                    Virtual Reality
                   </h4>
                 </div>
               </div>
@@ -160,7 +211,7 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/iot 1.png" alt="" />
+                  <img src="./assets/iot 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -173,7 +224,7 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/blockchain 1.png" alt="" />
+                  <img src="./assets/blockchain 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -186,7 +237,7 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/ml 1.png" alt="" />
+                  <img src="./assets/ml 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -199,7 +250,7 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/security 1.png" alt="" />
+                  <img src="./assets/security 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -212,7 +263,7 @@
             <div class="col-md-3 card open-card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/open 1.png" alt="" />
+                  <img src="./assets/open 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -226,7 +277,7 @@
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/cloud 1.png" alt="" />
+                  <img src="./assets/cloud 1.png" alt="Image" />
                 </div>
                 <div class="text">
                   <h4>
@@ -255,7 +306,7 @@
             <div class="col-md-4 d-flex justify-content-center">
               <div class="why-cards card gold-card" data-aos="fade-up ">
                 <div class="card-content">
-                  <img src="./assets/gold coin.png" class="gold-coin" alt="" />
+                  <img src="./assets/gold coin.png" class="gold-coin" alt="Image" />
                   <h1>  &#8377;50k</h1>
                   <h2>
                     Winners
@@ -269,7 +320,7 @@
                   <img
                     src="./assets/bronze.png"
                     class="bronze-coin"
-                    alt=""
+                    alt="Image"
                   />
                   <h1>  &#8377;35k</h1>
                   <h2>
@@ -283,7 +334,7 @@
       </section>
       <section id="why">
         <!-- <div class="right-svg svg">
-          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="" />
+          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="Image" />
         </div> -->
         <div class="container why-container">
           <div class="row">
@@ -300,7 +351,7 @@
                     class="silver-coin"
                     alt="rupee-card"
                   />
-                  <h1>&#8377;35k</h1>
+                  <h1>&#8377;5k</h1>
                   <h2>1st Runner-Up</h2>
                 </div>
               </div>
@@ -308,8 +359,8 @@
             <div class="col-md-4 d-flex justify-content-center">
               <div class="why-cards card gold-card" data-aos="fade-up ">
                 <div class="card-content">
-                  <img src="./assets/gold coin.png" class="gold-coin" alt="" />
-                  <h1>&#8377;50k</h1>
+                  <img src="./assets/gold coin.png" class="gold-coin" alt="Image" />
+                  <h1>&#8377;10k</h1>
                   <h2>Winners</h2>
                 </div>
               </div>
@@ -317,8 +368,8 @@
             <div class="col-md-4 d-flex justify-content-center">
               <div class="why-cards card" data-aos="fade-left">
                 <div class="card-content">
-                  <img src="./assets/bronze.png" class="bronze-coin" alt="" />
-                  <h1>&#8377;35k</h1>
+                  <img src="./assets/bronze.png" class="bronze-coin" alt="Image" />
+                  <h1>&#8377;2k</h1>
                   <h2>2nd-runner-up</h2>
                 </div>
               </div>
@@ -341,7 +392,7 @@
                   <img
                     src="./assets/platinum-logo-1.png"
                     class="insight-img"
-                    alt=""
+                    alt="Image"
                   />
                   <h2>Parul University</h2>
                   <p>
@@ -363,38 +414,40 @@
 
       <section id="sponsors">
         <!-- <div class="left-svg svg">
-          <img src="./assets/LEFT SIDE PATTERN 3.svg" alt="" />
+          <img src="./assets/LEFT SIDE PATTERN 3.svg" alt="Image" />
         </div>
         <div class="right-svg-1 svg">
-          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="" />
+          <img src="./assets//RIGHT SIDE PATTERN 3.svg" alt="Image" />
         </div> -->
         <div class="container sponsors-container">
           <h1>Title Sponsors</h1>
           <div class="row">
             <div class="col">
               <!-- <h1 class="platinum-heading gradient-text">Diamond Class</h1> -->
-              <img src="./assets/Frame 3.png" alt="" />
+              <img src="./assets/Frame 3.png" alt="Image" />
             </div>
           </div>
           <div class="row">
             <div class="col-md-3 card" data-aos="fade-up-left">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/platinum-logo-1.png" alt="" />
+                  <img src="./assets/platinum-logo-1.png" alt="Image" />
                 </div>
               </div>
             </div>
             <div class="col-md-3 card" data-aos="fade-down">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/platinum-logo-2.png" alt="" />
+                  <img src="./assets/github-logo.png" alt="Image" 
+                  height="100"
+                  />
                 </div>
               </div>
             </div>
             <div class="col-md-3 card" data-aos="fade-up-right">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/platinum-logo-3.png" alt="" />
+                  <img src="./assets/platinum-logo-3.png" alt="Image" />
                 </div>
               </div>
             </div>
@@ -402,7 +455,7 @@
           <div class="row">
             <div class="col">
               <!-- <h1 class="silver-heading gradient-text">Platinum Class</h1> -->
-              <img src="./assets/Frame 4.png" alt="" />
+              <img src="./assets/Frame 4.png" alt="Image" />
             </div>
           </div>
 
@@ -410,34 +463,105 @@
             <div class="col-md-3 card" data-aos="flip-right">
               <div class="card-content" data-aos="flip-right">
                 <div class="logo">
-                  <img src="./assets/gold-logo-1.png" alt="" />
+                  <a href="https://devfolio.co" target="_blank">
+                    <img src="./assets/Devfolio.png" alt="Image" 
+                    width="200" height="81"/>
+                  </a>
+                 
                 </div>
               </div>
             </div>
             <div class="col-md-3 card" data-aos="flip-down">
               <div class="card-content" data-aos="flip-down">
                 <div class="logo">
-                  <img
-                    src="./assets/gold-logo-2.png
-                  "
-                    alt=""
+
+                  <a href="https://polygon.technology/" target="_blank">
+                    <img
+                    src="./assets/Polygon.png"
+                    alt="Image"  width="200" height="81"
                   />
+
+                  </a>
+                 
                 </div>
               </div>
             </div>
 
-            <div class="col-md-3 card" data-aos="flip-left">
-              <div class="card-content" data-aos="flip-left">
+            <div class="col-md-3 card" data-aos="flip-down">
+              <div class="card-content" data-aos="flip-down">
                 <div class="logo">
-                  <img src="./assets/gold-logo-3.png" alt="" />
+                  <a href="https://solana.com " target="_blank">
+
+                    <img
+                    src="./assets/Solana.svg"
+                  
+                    alt="Image"  width="200" height="81"
+                  />
+
+                  </a>
+                  
                 </div>
               </div>
             </div>
+            <div class="col-md-3 card" data-aos="flip-down">
+              <div class="card-content" data-aos="flip-down">
+                <div class="logo">
+                  <a href="https://www.offensive-security.com/" target="_blank">
+
+                    <img
+                    src="./assets/offsec-logo.svg"
+                  
+                    alt="Image"  width="200" height="81"
+                  />
+
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 card" data-aos="flip-down">
+              <div class="card-content" data-aos="flip-down">
+                <div class="logo">
+                  <a href="https://filecoin.io " target="_blank">
+                    <img
+                    src="./assets/Filecoin.png"
+                    alt="Image"  width="200" height="81"
+                  />
+
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="flip-down">
+              <div class="card-content" data-aos="flip-down">
+                <div class="logo">
+                  <a href="https://replit.com "target="_blank">
+
+                    <img
+                    src="./assets/Replit.png"
+                  
+                    alt="Image"  width="200" height="81"
+                  />
+                  </a>
+                 
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-3 card" data-aos="flip-left">
+              <div class="card-content" data-aos="flip-left">
+                <div class="logo">
+                  <img src="./assets/gold-logo-3.png" alt="Image" />
+                </div>
+              </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col">
               <!-- <h1 class="golden-heading gradient-text">Gold Class</h1> -->
-              <img src="./assets/Frame 5.png" alt="" />
+              <img src="./assets/Frame 5.png" alt="Image" />
             </div>
           </div>
 
@@ -445,21 +569,24 @@
             <div class="col-md-3 card" data-aos="zoom-out-left">
               <div class="card-content" data-aos="flip-left">
                 <div class="logo">
-                  <img src="./assets/SILVER- LOGO 1.png" alt="" />
+                  <a href="https://gen.xyz/" target="_blank">     
+                    <img src="./assets/xyz-logo-white.svg" alt="Image" />
+                  </a>
                 </div>
               </div>
             </div>
             <div class="col-md-3 card" data-aos="zoom-out">
               <div class="card-content" data-aos="flip-left">
                 <div class="logo">
-                  <img src="./assets/SILVER- LOGO 2.png" alt="" />
+                  
+                  <img src="./assets/SILVER- LOGO 2.png" alt="Image" />
                 </div>
               </div>
             </div>
             <div class="col-md-3 card" data-aos="zoom-out-right">
               <div class="card-content" data-aos="flip-left">
                 <div class="logo">
-                  <img src="./assets/SILVER- LOGO 3 (1).png" alt="" />
+                  <img src="./assets/SILVER- LOGO 3 (1).png" alt="Image" />
                 </div>
               </div>
             </div>
@@ -474,21 +601,21 @@
           <div class="col-md-3 card">
             <div class="card-content">
               <div class="logo">
-                <img src="./assets/BRONZE- LOGO 1.png" alt="" />
+                <img src="./assets/BRONZE- LOGO 1.png" alt="Image" />
               </div>
             </div>
           </div>
           <div class="col-md-3 card">
             <div class="card-content">
               <div class="logo">
-                <img src="./assets/BRONZE- LOGO 2.png" alt="" />
+                <img src="./assets/BRONZE- LOGO 2.png" alt="Image" />
               </div>
             </div>
           </div>
           <div class="col-md-3 card">
             <div class="card-content">
               <div class="logo">
-                <img src="./assets/BRONZE- LOGO 3.png" alt="" />
+                <img src="./assets/BRONZE- LOGO 3.png" alt="Image" />
               </div>
             </div>
           </div>
@@ -510,6 +637,162 @@
         </div>
       </section>
 
+      <section id="speakers">
+        <h1 class="justify-content-center d-flex">Speakers</h1>
+        <div class="container speaker-container">
+          <!-- <div class="row ">
+            <div class="col-md-8">
+              <h1 class="section-title">Speakers</h1>
+            </div>
+          </div> -->
+            <div class="row ">
+              
+              <div class="col-md-3 col">
+                <div class="card ">
+                  <div class="card-content">
+                    <div class="card-img">
+                      <img src="./assets/speaker-vraj.png" alt="">
+
+                    </div>
+                    <div class="speaker-details">
+                      <h2>Vraj Desai</h2>
+                      <p>Github Campus Expert</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 col">
+                <div class="card ">
+                  <div class="card-content">
+                    <div class="card-img">
+                      <img src="./assets/speaker-vraj.png" alt="">
+
+                    </div>
+                    <div class="speaker-details">
+                      <h2>Vraj Desai</h2>
+                      <p>Github Campus Expert</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 col">
+                <div class="card ">
+                  <div class="card-content">
+                    <div class="card-img">
+                      <img src="./assets/speaker-vraj.png" alt="">
+
+                    </div>
+                    <div class="speaker-details">
+                      <h2>Vraj Desai</h2>
+                      <p>Github Campus Expert</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 col">
+                <div class="card ">
+                  <div class="card-content">
+                    <div class="card-img">
+                      <img src="./assets/speaker-vraj.png" alt="">
+
+                    </div>
+                    <div class="speaker-details">
+                      <h2>Vraj Desai</h2>
+                      <p>Github Campus Expert</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+             
+              
+              
+             
+          </div>
+        </div>
+      </section>
+      <!-- <section id="community-partner">
+        <div class="container sponsors-container">
+          <h1>Community Partners</h1>
+
+          <div class="row">
+            <div class="col-md-3 card" data-aos="fade-up-left">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-down">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" 
+                  height="100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-up-right">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-up-left">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-down">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" 
+                  height="100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-up-right">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-up-left">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 card" data-aos="fade-up-left">
+              <div class="card-content" data-aos="flip-right">
+                <div class="logo">
+                  <img src="./assets/GDSC Brackets.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          
+         
+
+          
+       
+          
+        </div>
+
+        </section> -->
+      
+
       <section id="organizers">
         <h1>Organizers</h1>
         <div class="container organizers-container">
@@ -517,7 +800,7 @@
             <div class="main-column col-md-3">
               <div class="card" data-aos="fade-right">
                 <div class="card-img">
-                  <img src="./assets/Aman  1.png" alt="" />
+                  <img src="./assets/Aman  1.png" alt="Image" />
                 </div>
                 <div class="content">
                   <h2>Aman Singh</h2>
@@ -532,10 +815,10 @@
             <div class="col-md-3 main-column">
               <div class="card" data-aos="fade-up">
                 <div class="card-img">
-                  <img src="./assets/profile_picture_hoodie.jpg" alt="" />
+                  <img src="./assets/profile_picture_hoodie.jpg" alt="Image" />
                 </div>
                 <div class="content">
-                  <h2>Tejas Butani</h2>
+                  <h2>Tejash Butani</h2>
                   <p>Organizer</p>
                 </div>
               </div>
@@ -547,7 +830,7 @@
             <div class="col-md-3 main-column">
               <div class="card" data-aos="fade-down">
                 <div class="card-img">
-                  <img src="./assets/Shristi.jpg" alt="" />
+                  <img src="./assets/Shristi.jpg" alt="Image" />
                 </div>
                 <div class="content">
                   <h2>Shristi Shukla</h2>
@@ -565,7 +848,7 @@
                   <img
                     class="abhishek-img"
                     src="./assets/abhishek.jpeg"
-                    alt=""
+                    alt="Image"
                   />
                 </div>
                 <div class="content">
@@ -584,33 +867,33 @@
 
       <section id="footer">
         <!-- <div class="left-svg-2 svg">
-          <img src="./assets/LEFT SIDE PATTERN 3.svg" alt="" />
+          <img src="./assets/LEFT SIDE PATTERN 3.svg" alt="Image" />
         </div> -->
 
         <div class="container footer-container">
           <div class="logo" data-aos="fade-out">
             <span class="rectangle-background"></span>
-            <img src="./logos/Hackvengers_logo.png" alt="" />
-            <img class="logo-up" src="./logos/logo-up.png" alt="" />
+            <img src="./logos/Hackvengers_logo.png" alt="Image" />
+            <img class="logo-up" src="./logos/logo-up.png" alt="Image" />
           </div>
 
           <!-- <img src="./logos/Hackvengers_lo<li class="nav-item">
                           <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>go.png" alt=""> -->
+                      </li>go.png" alt="Image"> -->
           <div class="socials">
             <a
               class="social-icon"
               href="https://www.instagram.com/hack_vengers"
               data-aos="fade-right"
               target="_blank"
-              ><img class="w-100" src="./assets/instagram (1).png" alt=""
+              ><img class="w-100" src="./assets/instagram (1).png" alt="Image"
             /></a>
             <a
               class="social-icon"
               href="https://discord.gg/rUEHG6Aa"
               data-aos="fade-up"
               target="_blank"
-              ><img class="w-100" src="./assets/discord (1).png" alt=""
+              ><img class="w-100" src="./assets/discord (1).png" alt="Image"
             /></a>
             <a
               class="social-icon"
@@ -618,23 +901,23 @@
               data-aos="fade-down"
               target="_blank
             "
-              ><img class="w-100" src="./assets/twitter (1).png" alt=""
+              ><img class="w-100" src="./assets/twitter (1).png" alt="Image"
             /></a>
             <a
               class="social-icon"
               href="https://www.linkedin.com/company/hackvengers"
               data-aos="fade-left"
               target="_blank"
-              ><img src="./assets/linked in.png" width="36" height="36" alt=""
+              ><img src="./assets/linked in.png" width="36" height="36" alt="Image"
             /></a>
           </div>
 
-          <!-- <img src="./assets/" alt=""> -->
+          <!-- <img src="./assets/" alt="Image"> -->
         </div>
       </section>
     </div>
 
-    <script src="/JS/index.js"></script>
+    <script src="./JS/index.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -655,6 +938,7 @@
         delay: 10,
       });
     </script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
   </body>
-  <script src="/JS/gsap.js"></script>
+  <script src="./JS/gsap.js"></script>
 </html>

@@ -23,6 +23,7 @@ html {
   overflow-x: hidden;
   // overflow-y: hidden;
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -709,7 +710,7 @@ nav.navbar {
   }
 }
 
-#sponsors {
+#sponsors, #community-partner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -785,6 +786,131 @@ nav.navbar {
       }
     }
   }
+}
+
+#community-partner{
+  
+  h1{
+    margin-bottom: 3rem;
+  }
+  img{
+    min-width: 8rem !important;
+    height: 8rem !important;
+   
+  }
+}
+
+#speakers {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  gap: 2rem;
+  // padding-top: 10rem;
+  justify-content: center ;
+
+  h1 {
+    font-family: "Mars-Project", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+  }
+
+  .speaker-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    // flex-shrink: 1;
+    // gap: 3rem;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+      .col{
+        // margin-inline: 0.5rem;
+
+        .card {
+          background-color: transparent;
+          z-index: 100000;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 1px 3px 20px rgba(21, 69, 172, 0.4);
+          // width: 300px;
+          padding: 2rem;
+          margin-top: 2rem;
+          
+      
+          .card-img {
+            // background: linear-gradient(
+            //   102.24deg,
+            //   #00070a -137.58%,
+            //   rgba(3, 18, 69, 0) 122.85%
+            // );
+            // box-shadow: 0 14px 26px rgba(38, 83, 156, 0.4);
+            // border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 240px;
+            margin-bottom: 3rem;
+            
+            
+      
+            img {
+              width: 250px;
+              
+              transition: all 0.6s ease-in-out;
+              
+            }
+      
+            
+          }
+      
+          .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            .speaker-details{
+              
+
+              h2 {
+                
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #3683F5;
+              }
+              p {
+                font-size: 1.3rem;
+                // font-weight: bold;
+                // color: #0099db;
+              }
+            }
+          }
+      
+          transition: all 0.5s ease-out;
+          text-decoration: none;
+        }
+       
+      }
+    }
+  }
+
 }
 
 #organizers {
@@ -1009,32 +1135,7 @@ nav.navbar {
   margin-top: 8rem !important;
 }
 
-// .platinum-heading {
-//   background-image: linear-gradient(
-//     180deg,
-//     rgba(255, 255, 255, 1) 10%,
-//     rgb(141, 128, 214) 100%
-//   ) !important;
-//   box-shadow: 12px 12px 18px rgba(141, 128, 214, 0.7);
-// }
 
-// .golden-heading {
-//   background-image: linear-gradient(
-//     180deg,
-//     rgba(241, 169, 8, 1) 0%,
-//     rgba(194, 237, 11, 1) 100%
-//   );
-//   text-shadow: 3px 1px 1px rgba(153, 69, 9, 1.9);
-// }
-
-// .silver-heading {
-//   background-image: linear-gradient(
-//     180deg,
-//     rgb(162, 252, 232) 1%,
-//     rgb(71, 60, 134) 100%
-//   ) !important;
-//   text-shadow: -3px 1px 1px rgba(153, 146, 145, 0.7);
-// }
 @media (min-width: 768px) {
   .navbar-brand {
     display: block !important;
@@ -1084,17 +1185,13 @@ nav.navbar {
       display: flex;
       flex-wrap: wrap;
 
-      .main-column {
-        // right: 20rem;
-      }
+      
     }
     .card {
       flex-basis: 50%;
       width: 14rem;
 
-      .abhishek-img {
-        // height: 10rem;
-      }
+      
     }
   }
 
@@ -1125,7 +1222,7 @@ nav.navbar {
     }
   }
 
-  #sponsors {
+  #sponsors,#community-partner {
     .row {
       .col {
         img {
@@ -1136,6 +1233,7 @@ nav.navbar {
   }
 }
 @media screen and (min-width: 1000px) {
+
   nav.navbar {
     border-bottom: 1px solid white;
   }
@@ -1158,10 +1256,11 @@ nav.navbar {
     }
   }
 
-  #sponsors {
+  #sponsors,#community-partner {
     .sponsors-container {
       .row {
         gap: 1rem !important;
+        flex-wrap: wrap !important;
 
         .card {
           height: 11rem;
@@ -1176,19 +1275,14 @@ nav.navbar {
     flex-direction: row !important;
   }
 
-  #organizers {
+  #organizers,#speakers {
     .card {
       // height: 15rem;
-      width: 14rem;
+      width: 16rem !important;
     }
-    .row {
-      flex-wrap: nowrap;
-    }
+    
   }
-  // .collapse-div {
-  //   display: flex;
-  //   // display: inline;
-  // }
+  
   #tracks {
     .row {
       // flex-wrap: nowrap !important;
@@ -1218,10 +1312,23 @@ nav.navbar {
       }
     }
   }
+  #speakers {
+    .card{
+      padding: 0 !important;
+      .card-content{
+        img{
+
+          width: 200px !important;
+        }
+      }
+    }
+  }
+
+  
 }
 
 @media (min-width: 1200px) {
-  #sponsors {
+  #sponsors  {
     .sponsors-container {
       .row {
         gap: 3rem !important;
@@ -1236,7 +1343,10 @@ nav.navbar {
     }
   }
 
-  #organizers {
+  #organizers, #speakers {
+    .row {
+      flex-wrap: nowrap !important;
+    }
     .card {
       // height: 18rem;
       width: 16rem;
@@ -1400,17 +1510,6 @@ nav.navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
-  //   repeating-linear-gradient(
-  //     0,
-  //     transparent,
-  //     transparent 2px,
-  //     black 3px,
-  //     black 3px
-  //   ),
-  //   url("https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7118759521e3184778a3b5e010e202c6");
-  // background-size: cover;
-  // background-position: center;
   z-index: 1;
 }
 

@@ -6,7 +6,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none;
 }
 
 @font-face {
@@ -273,6 +272,7 @@ nav.navbar .collapse {
 }
 #about .about-container {
   background: transparent;
+  text-justify: auto;
 }
 #about .about-container h1 {
   font-family: "Mars-Project", sans-serif;
@@ -280,6 +280,7 @@ nav.navbar .collapse {
   letter-spacing: 1;
 }
 #about .about-container p {
+  text-align: justify;
   font-size: 1.1rem;
 }
 #about .about-container p span {
@@ -474,7 +475,7 @@ nav.navbar .collapse {
   min-height: 100vh;
   height: 100%;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 #supporter .supporter-container .row {
   display: flex;
@@ -485,7 +486,7 @@ nav.navbar .collapse {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: justify;
 }
 #supporter .supporter-container .row .col h1,
 #supporter .supporter-container .row .col > h1 {
@@ -508,12 +509,14 @@ nav.navbar .collapse {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   position: relative;
   padding: 3rem 2rem;
+  text-justify: auto;
 }
 #supporter .supporter-container .row .col .supporter-card .card-content img {
-  max-width: 10rem;
+  scale: 0.5;
+  height: 7rem !important;
   z-index: 1;
 }
 #supporter .supporter-container .row .col .supporter-card .card-content h2 {
@@ -523,6 +526,7 @@ nav.navbar .collapse {
   text-transform: uppercase;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  text-align: center;
 }
 #supporter .supporter-container .row .col .supporter-card .card-content p {
   font-size: 1.1rem;
@@ -532,7 +536,8 @@ nav.navbar .collapse {
   box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
 }
 
-#sponsors, #community-partner {
+#sponsors,
+#community-partner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,22 +546,26 @@ nav.navbar .collapse {
   min-height: 100vh;
   margin-bottom: 5rem;
 }
-#sponsors .sponsors-container > h1, #community-partner .sponsors-container > h1 {
+#sponsors .sponsors-container > h1,
+#community-partner .sponsors-container > h1 {
   font-size: 3rem;
 }
-#sponsors .sponsors-container .row, #community-partner .sponsors-container .row {
+#sponsors .sponsors-container .row,
+#community-partner .sponsors-container .row {
   display: flex;
   text-align: center !important;
   justify-content: center;
   gap: 3rem;
   align-items: center;
 }
-#sponsors .sponsors-container .row .col img, #community-partner .sponsors-container .row .col img {
+#sponsors .sponsors-container .row .col img,
+#community-partner .sponsors-container .row .col img {
   max-width: 20rem;
   margin-block: 2rem;
   margin-top: 5rem;
 }
-#sponsors .sponsors-container .row .card, #community-partner .sponsors-container .row .card {
+#sponsors .sponsors-container .row .card,
+#community-partner .sponsors-container .row .card {
   background: linear-gradient(102.24deg, #00070a -137.58%, rgba(3, 18, 69, 0) 122.85%);
   box-shadow: 1px 1px 15px rgba(21, 69, 172, 0.4) !important;
   height: 11rem;
@@ -564,31 +573,36 @@ nav.navbar .collapse {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-inline: 1rem;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
 }
-#sponsors .sponsors-container .row .card .card-content .logo img, #community-partner .sponsors-container .row .card .card-content .logo img {
+#sponsors .sponsors-container .row .card .card-content .logo img,
+#community-partner .sponsors-container .row .card .card-content .logo img {
   height: 4rem;
 }
-#sponsors .sponsors-container .row #sponserBtn, #community-partner .sponsors-container .row #sponserBtn {
+#sponsors .sponsors-container .row #sponserBtn,
+#community-partner .sponsors-container .row #sponserBtn {
   margin-top: 7rem;
 }
 
+#community-partner {
+  height: 100% !important;
+  min-height: 50vh;
+}
 #community-partner a {
   text-decoration: none;
   color: white;
 }
 #community-partner h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem !important;
+  line-height: 1 !important;
 }
 #community-partner img {
   min-width: 7rem !important;
   height: 7rem !important;
   margin-bottom: -1rem;
-}
-#community-partner .card-content {
-  gap: 1rem !important;
 }
 
 #speakers {
@@ -655,23 +669,32 @@ nav.navbar .collapse {
   height: 100%;
 }
 #speakers .speaker-container .row .col .card .card-content .speaker-details h2 {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #3683F5;
+  color: #3683f5;
 }
 #speakers .speaker-container .row .col .card .card-content .speaker-details p {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
+}
+#speakers .speaker-container .row .col .card .card-content .speaker-socials {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+#speakers .speaker-container .row .col .card .card-content .speaker-socials .speaker-social-icon img {
+  width: 2rem !important;
+  height: 2rem;
 }
 
 #organizers {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 3rem;
   gap: 2rem;
-  padding-top: 10rem;
 }
 #organizers h1 {
   font-family: "Mars-Project", sans-serif;
@@ -874,7 +897,8 @@ nav.navbar .collapse {
   #supporter .supporter-container p {
     font-size: 1.4rem !important;
   }
-  #sponsors .row .col img, #community-partner .row .col img {
+  #sponsors .row .col img,
+  #community-partner .row .col img {
     max-width: 40rem !important;
   }
 }
@@ -894,11 +918,13 @@ nav.navbar .collapse {
   .about-container p span {
     font-size: 1.7rem;
   }
-  #sponsors .sponsors-container .row, #community-partner .sponsors-container .row {
+  #sponsors .sponsors-container .row,
+  #community-partner .sponsors-container .row {
     gap: 1rem !important;
     flex-wrap: wrap !important;
   }
-  #sponsors .sponsors-container .row .card, #community-partner .sponsors-container .row .card {
+  #sponsors .sponsors-container .row .card,
+  #community-partner .sponsors-container .row .card {
     height: 11rem;
     width: 18rem;
   }
@@ -907,7 +933,8 @@ nav.navbar .collapse {
     flex-wrap: nowrap;
     flex-direction: row !important;
   }
-  #organizers .card, #speakers .card {
+  #organizers .card,
+  #speakers .card {
     width: 16rem !important;
   }
   #tracks .row .card {
@@ -943,10 +970,12 @@ nav.navbar .collapse {
     height: 11rem;
     width: 20rem;
   }
-  #organizers .row, #speakers .row {
+  #organizers .row,
+  #speakers .row {
     flex-wrap: nowrap !important;
   }
-  #organizers .card, #speakers .card {
+  #organizers .card,
+  #speakers .card {
     width: 16rem;
   }
 }
@@ -1119,208 +1148,208 @@ box to be used for the random glitch effect. Also adds a very subtle
 skew to change the 'thickness' of the glitch.*/
 @keyframes glitch-anim {
   0% {
-    clip: rect(15px, 9999px, 48px, 0);
-    transform: skew(0.75deg);
+    clip: rect(94px, 9999px, 63px, 0);
+    transform: skew(0.82deg);
   }
   5% {
-    clip: rect(73px, 9999px, 35px, 0);
-    transform: skew(0.37deg);
+    clip: rect(61px, 9999px, 5px, 0);
+    transform: skew(0.88deg);
   }
   10% {
-    clip: rect(69px, 9999px, 90px, 0);
-    transform: skew(0.22deg);
+    clip: rect(17px, 9999px, 40px, 0);
+    transform: skew(0.11deg);
   }
   15% {
-    clip: rect(47px, 9999px, 44px, 0);
-    transform: skew(0.38deg);
+    clip: rect(48px, 9999px, 36px, 0);
+    transform: skew(0.17deg);
   }
   20% {
-    clip: rect(16px, 9999px, 98px, 0);
-    transform: skew(0.55deg);
+    clip: rect(88px, 9999px, 70px, 0);
+    transform: skew(0.97deg);
   }
   25% {
-    clip: rect(37px, 9999px, 65px, 0);
-    transform: skew(0.7deg);
+    clip: rect(12px, 9999px, 66px, 0);
+    transform: skew(0.2deg);
   }
   30% {
-    clip: rect(51px, 9999px, 66px, 0);
-    transform: skew(0.12deg);
+    clip: rect(9px, 9999px, 73px, 0);
+    transform: skew(0.16deg);
   }
   35% {
-    clip: rect(64px, 9999px, 35px, 0);
-    transform: skew(0.18deg);
+    clip: rect(57px, 9999px, 1px, 0);
+    transform: skew(0.67deg);
   }
   40% {
-    clip: rect(49px, 9999px, 5px, 0);
-    transform: skew(0.58deg);
+    clip: rect(95px, 9999px, 69px, 0);
+    transform: skew(0.25deg);
   }
   45% {
-    clip: rect(1px, 9999px, 25px, 0);
-    transform: skew(0.12deg);
+    clip: rect(54px, 9999px, 43px, 0);
+    transform: skew(0.73deg);
   }
   50% {
-    clip: rect(91px, 9999px, 96px, 0);
-    transform: skew(0.87deg);
-  }
-  55% {
-    clip: rect(50px, 9999px, 13px, 0);
-    transform: skew(0.52deg);
-  }
-  60% {
-    clip: rect(99px, 9999px, 59px, 0);
-    transform: skew(0.62deg);
-  }
-  65% {
-    clip: rect(55px, 9999px, 25px, 0);
-    transform: skew(0.32deg);
-  }
-  70% {
-    clip: rect(81px, 9999px, 69px, 0);
+    clip: rect(93px, 9999px, 1px, 0);
     transform: skew(0.26deg);
   }
+  55% {
+    clip: rect(81px, 9999px, 49px, 0);
+    transform: skew(0.88deg);
+  }
+  60% {
+    clip: rect(36px, 9999px, 51px, 0);
+    transform: skew(0.32deg);
+  }
+  65% {
+    clip: rect(41px, 9999px, 48px, 0);
+    transform: skew(0.41deg);
+  }
+  70% {
+    clip: rect(22px, 9999px, 24px, 0);
+    transform: skew(0.16deg);
+  }
   75% {
-    clip: rect(15px, 9999px, 68px, 0);
-    transform: skew(0.93deg);
+    clip: rect(41px, 9999px, 49px, 0);
+    transform: skew(0.89deg);
   }
   80% {
-    clip: rect(74px, 9999px, 90px, 0);
-    transform: skew(0.57deg);
+    clip: rect(30px, 9999px, 69px, 0);
+    transform: skew(0.87deg);
   }
   85% {
-    clip: rect(53px, 9999px, 35px, 0);
-    transform: skew(0.92deg);
+    clip: rect(89px, 9999px, 2px, 0);
+    transform: skew(0.12deg);
   }
   90% {
-    clip: rect(41px, 9999px, 57px, 0);
-    transform: skew(0.1deg);
+    clip: rect(80px, 9999px, 83px, 0);
+    transform: skew(0.84deg);
   }
   95% {
-    clip: rect(44px, 9999px, 85px, 0);
-    transform: skew(0.74deg);
+    clip: rect(58px, 9999px, 74px, 0);
+    transform: skew(0.34deg);
   }
   100% {
-    clip: rect(19px, 9999px, 64px, 0);
-    transform: skew(0.47deg);
+    clip: rect(81px, 9999px, 40px, 0);
+    transform: skew(0.53deg);
   }
 }
 @keyframes glitch-anim2 {
   0% {
-    clip: rect(87px, 9999px, 33px, 0);
-    transform: skew(0.79deg);
+    clip: rect(58px, 9999px, 29px, 0);
+    transform: skew(0.48deg);
   }
   5% {
-    clip: rect(83px, 9999px, 40px, 0);
-    transform: skew(0.31deg);
+    clip: rect(48px, 9999px, 51px, 0);
+    transform: skew(0.92deg);
   }
   10% {
-    clip: rect(51px, 9999px, 79px, 0);
-    transform: skew(0.03deg);
+    clip: rect(53px, 9999px, 26px, 0);
+    transform: skew(0.13deg);
   }
   15% {
-    clip: rect(89px, 9999px, 90px, 0);
-    transform: skew(0.22deg);
+    clip: rect(5px, 9999px, 49px, 0);
+    transform: skew(0.6deg);
   }
   20% {
-    clip: rect(53px, 9999px, 94px, 0);
-    transform: skew(0.1deg);
+    clip: rect(39px, 9999px, 29px, 0);
+    transform: skew(0.14deg);
   }
   25% {
-    clip: rect(53px, 9999px, 50px, 0);
-    transform: skew(0.46deg);
+    clip: rect(71px, 9999px, 45px, 0);
+    transform: skew(0.35deg);
   }
   30% {
-    clip: rect(64px, 9999px, 23px, 0);
-    transform: skew(0.08deg);
+    clip: rect(11px, 9999px, 26px, 0);
+    transform: skew(0.49deg);
   }
   35% {
-    clip: rect(29px, 9999px, 16px, 0);
-    transform: skew(0.62deg);
+    clip: rect(14px, 9999px, 91px, 0);
+    transform: skew(0.84deg);
   }
   40% {
-    clip: rect(68px, 9999px, 88px, 0);
-    transform: skew(0.06deg);
+    clip: rect(90px, 9999px, 5px, 0);
+    transform: skew(0.58deg);
   }
   45% {
-    clip: rect(74px, 9999px, 16px, 0);
-    transform: skew(0.12deg);
-  }
-  50% {
-    clip: rect(62px, 9999px, 39px, 0);
-    transform: skew(0.8deg);
-  }
-  55% {
-    clip: rect(63px, 9999px, 67px, 0);
-    transform: skew(0.79deg);
-  }
-  60% {
-    clip: rect(95px, 9999px, 91px, 0);
-    transform: skew(0.88deg);
-  }
-  65% {
-    clip: rect(84px, 9999px, 32px, 0);
+    clip: rect(61px, 9999px, 20px, 0);
     transform: skew(0.56deg);
   }
-  70% {
-    clip: rect(88px, 9999px, 99px, 0);
-    transform: skew(0.47deg);
+  50% {
+    clip: rect(54px, 9999px, 12px, 0);
+    transform: skew(0.25deg);
   }
-  75% {
-    clip: rect(58px, 9999px, 13px, 0);
-    transform: skew(0.41deg);
+  55% {
+    clip: rect(96px, 9999px, 65px, 0);
+    transform: skew(0.23deg);
   }
-  80% {
-    clip: rect(88px, 9999px, 97px, 0);
+  60% {
+    clip: rect(72px, 9999px, 92px, 0);
+    transform: skew(0.08deg);
+  }
+  65% {
+    clip: rect(81px, 9999px, 56px, 0);
     transform: skew(0.76deg);
   }
+  70% {
+    clip: rect(54px, 9999px, 58px, 0);
+    transform: skew(0.59deg);
+  }
+  75% {
+    clip: rect(17px, 9999px, 23px, 0);
+    transform: skew(0.55deg);
+  }
+  80% {
+    clip: rect(22px, 9999px, 33px, 0);
+    transform: skew(0.45deg);
+  }
   85% {
-    clip: rect(44px, 9999px, 85px, 0);
-    transform: skew(0.66deg);
+    clip: rect(9px, 9999px, 12px, 0);
+    transform: skew(0.73deg);
   }
   90% {
-    clip: rect(64px, 9999px, 49px, 0);
-    transform: skew(0.09deg);
+    clip: rect(86px, 9999px, 97px, 0);
+    transform: skew(0.11deg);
   }
   95% {
-    clip: rect(38px, 9999px, 39px, 0);
-    transform: skew(0.33deg);
+    clip: rect(38px, 9999px, 82px, 0);
+    transform: skew(0.5deg);
   }
   100% {
-    clip: rect(24px, 9999px, 48px, 0);
-    transform: skew(0.48deg);
+    clip: rect(63px, 9999px, 43px, 0);
+    transform: skew(0.62deg);
   }
 }
 @keyframes glitch-skew {
   0% {
-    transform: skew(-4deg);
-  }
-  10% {
-    transform: skew(0deg);
-  }
-  20% {
-    transform: skew(-1deg);
-  }
-  30% {
-    transform: skew(0deg);
-  }
-  40% {
-    transform: skew(0deg);
-  }
-  50% {
     transform: skew(-3deg);
   }
-  60% {
-    transform: skew(0deg);
-  }
-  70% {
+  10% {
     transform: skew(4deg);
   }
-  80% {
-    transform: skew(0deg);
+  20% {
+    transform: skew(4deg);
   }
-  90% {
+  30% {
+    transform: skew(5deg);
+  }
+  40% {
+    transform: skew(2deg);
+  }
+  50% {
     transform: skew(1deg);
   }
+  60% {
+    transform: skew(1deg);
+  }
+  70% {
+    transform: skew(-1deg);
+  }
+  80% {
+    transform: skew(3deg);
+  }
+  90% {
+    transform: skew(5deg);
+  }
   100% {
-    transform: skew(-4deg);
+    transform: skew(3deg);
   }
 }/*# sourceMappingURL=style.css.map */
